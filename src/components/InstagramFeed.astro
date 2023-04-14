@@ -6,7 +6,7 @@ import { fetchInstagramFeed } from './instagram-feed.js'; // Adjust the path to 
 const posts = await fetchInstagramFeed();
 ---
 
-<div>
+<div class="h-screen">
   <div>
     <h1 class="text-center">Recent Creations</h1>
   </div>
@@ -24,12 +24,4 @@ const posts = await fetchInstagramFeed();
       ))
     }
   </div>
-  <section class="mt-24 mb-32">
-    <div class="container">
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2">
-        <Counter count="202" title="Posts" />
-        <Counter count="32.1k" title="Followers" />
-      </div>
-    </div>
-  </section>
 </div>

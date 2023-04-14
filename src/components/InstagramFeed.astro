@@ -1,12 +1,11 @@
 ---
 import { Media } from 'accessible-astro-components';
-import Counter from './Counter.astro';
-import { fetchInstagramFeed } from './instagram-feed.js'; // Adjust the path to your actual file location
+import { fetchInstagramFeed } from './instagram-feed.js';
 
 const posts = await fetchInstagramFeed();
 ---
 
-<div class="h-screen">
+<div class="h-screen mt-20">
   <div>
     <h1 class="text-center">Recent Creations</h1>
   </div>

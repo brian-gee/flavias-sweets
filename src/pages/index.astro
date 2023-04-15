@@ -1,12 +1,13 @@
 ---
+export const prerender = true;
 import Layout from '../layouts/Layout.astro';
 import InstagramFeed from '../components/InstagramFeed.astro';
-export const prerender = true;
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout title="">
   <main>
-    <h1>Welcome to <span class="text-gradient">Flavia's Sweets</span></h1>
+    <Hero />
     <InstagramFeed />
   </main>
 </Layout>

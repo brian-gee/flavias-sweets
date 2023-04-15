@@ -6,9 +6,6 @@ const posts = await fetchInstagramFeed();
 ---
 
 <div class="h-screen mt-20">
-  <div>
-    <h1 class="text-center">Recent Creations</h1>
-  </div>
   <div id="instagram-feed" class="grid grid-cols-2">
     {
       posts.map((post) => (

@@ -1,0 +1,21 @@
+---
+import { fetchInstagramPosts } from '../utils/instagram';
+
+const accessToken = 'YOUR_ACCESS_TOKEN';
+const numberOfPosts = 9; // change this to the number of posts you want to display
+
+const posts = await fetchInstagramPosts(accessToken, numberOfPosts);
+---
+
+<section class="instagram-posts">
+  {
+    posts.map((post) => (
+      <a href={post.permalink} target="_blank" rel="noopener noreferrer">
+        <img
+          src={post.media_url}
+          alt={post.caption ? post.caption.substring(0, 100) : 'Instagram Post'}
+        />
+      </a>
+    ))
+  }
+</section>

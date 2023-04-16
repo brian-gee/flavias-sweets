@@ -6,7 +6,7 @@ const numberOfPosts = 9;
 const posts = await fetchInstagramPosts(numberOfPosts);
 ---
 
-<section class="instagram-posts">
+<section class="grid grid-cols-3">
   {
     posts.map((post) => (
       <a href={post.permalink} target="_blank" rel="noopener noreferrer">

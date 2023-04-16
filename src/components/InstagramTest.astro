@@ -1,10 +1,9 @@
 ---
-import { fetchInstagramPosts } from '../utils/instagram';
+import { fetchInstagramPosts } from './insta-feed-test.js';
 
-const accessToken = 'YOUR_ACCESS_TOKEN';
-const numberOfPosts = 9; // change this to the number of posts you want to display
+const numberOfPosts = 9;
 
-const posts = await fetchInstagramPosts(accessToken, numberOfPosts);
+const posts = await fetchInstagramPosts(numberOfPosts);
 ---
 
 <section class="instagram-posts">

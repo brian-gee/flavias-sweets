@@ -6,14 +6,32 @@ const numberOfPosts = 9;
 const posts = await fetchInstagramPosts(numberOfPosts);
 ---
 
-<section class="grid grid-cols-3">
+<section class="grid grid-cols-3 gap-4">
   {
     posts.map((post) => (
-      <a href={post.permalink} target="_blank" rel="noopener noreferrer">
-        <img
-          src={post.media_url}
-          alt={post.caption ? post.caption.substring(0, 100) : 'Instagram Post'}
-        />
+      <a
+        href={post.permalink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full h-0 pb-[100%] relative">
+        {post.media_type === 'VIDEO' ? (
+          <video
+            src={post.video_url}
+            alt={
+              post.caption ? post.caption.substring(0, 100) : 'Instagram Video'
+            }
+            className="absolute inset-0 w-full h-full object-cover"
+            controls
+          />
+        ) : (
+          <img
+            src={post.media_url}
+            alt={
+              post.caption ? post.caption.substring(0, 100) : 'Instagram Post'
+            }
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
       </a>
     ))
   }

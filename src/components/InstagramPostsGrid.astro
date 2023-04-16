@@ -20,10 +20,14 @@ const posts = await fetchInstagramPosts(numberOfPosts);
             alt={
               post.caption ? post.caption.substring(0, 100) : 'Instagram Video'
             }
-            className="absolute inset-0 w-full h-full object-cover"
+            class="absolute inset-0 w-full h-full object-cover"
             controls
             preload="metadata"
             poster={post.thumbnail_url || post.media_url}
+            autoplay
+            muted
+            loop
+            style="object-fit: cover;"
           />
         ) : (
           <img

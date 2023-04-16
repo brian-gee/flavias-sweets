@@ -22,6 +22,8 @@ const posts = await fetchInstagramPosts(numberOfPosts);
             }
             className="absolute inset-0 w-full h-full object-cover"
             controls
+            preload="metadata"
+            poster={post.thumbnail_url || post.media_url}
           />
         ) : (
           <img

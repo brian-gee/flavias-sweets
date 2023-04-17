@@ -6,11 +6,10 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
+    "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/deno": "^4.1.0",
     "@astrojs/netlify": "^2.2.2",
     "@astrojs/tailwind": "^3.1.1",
     "astro": "^2.2.3",

@@ -22,7 +22,7 @@
   </label>
   <label>
     Email
-    <input type="text" id="email" name="email" required name="email" />
+    <input type="text" id="email" name="email" required />
   </label>
   <label>
     Message

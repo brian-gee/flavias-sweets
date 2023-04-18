@@ -29,9 +29,6 @@ const posts: Post[] = await fetchInstagramPosts(numberOfPosts);
             controls
             preload="metadata"
             poster={post.thumbnail_url || post.media_url}
-            autoPlay
-            muted
-            loop
             style="object-fit: cover;"
           />
         ) : (

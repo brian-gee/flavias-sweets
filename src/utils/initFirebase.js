@@ -1,8 +1,9 @@
 import { app } from './initAuth';
-import { getDatabase, ref, set } from 'firebase/database';
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 
-const db = getDatabase(app);
+const db = getFirestore(app);
+const userEmail = 'briangeertsma@gmail.com';
 
 // Add customer
 export const addMessage = async (name, email, message) => {
@@ -10,12 +11,16 @@ export const addMessage = async (name, email, message) => {
   const dateTime = new Date().toISOString();
 
   try {
-    await set(ref(db, 'messages/' + messageId), {
+    await setDoc(doc(db, 'mail/' + messageId), {
       dateTime: dateTime,
       messageId: messageId,
       name: name,
       email: email,
-      message: message,
+      to: userEmail,
+      message: {
+        subject: 'Hello from Firebase!',
+        text: message,
+      },
     });
     console.log(dateTime, messageId, name, email, message, 'added');
   } catch (error) {

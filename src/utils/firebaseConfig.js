@@ -1,15 +1,23 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
+const APIKEY = import.meta.env.PUBLIC_API_KEY;
+const AUTHDOMAIN = import.meta.env.PUBLIC_AUTH_DOMAIN;
+const DATABASEURL = import.meta.env.PUBLIC_DATABASE_URL;
+const PROJECTID = import.meta.env.PUBLIC_PROJECT_ID;
+const STORAGEBUCKET = import.meta.env.PUBLIC_STORAGE_BUCKET;
+const MESSAGINGSENDERID = import.meta.env.PUBLIC_MESSAGING_SENDER_ID;
+const APPID = import.meta.env.PUBLIC_APP_ID;
+const MEASUREMENTID = import.meta.env.PUBLIC_MEASUREMENT_ID;
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBynkTp6c_sEhEF6e-EZ7fLayy28_i70YI',
-  authDomain: 'flavias-sweets.firebaseapp.com',
-  databaseURL: 'https://flavias-sweets-default-rtdb.firebaseio.com',
-  projectId: 'flavias-sweets',
-  storageBucket: 'flavias-sweets.appspot.com',
-  messagingSenderId: '6930398200',
-  appId: '1:6930398200:web:31b9d3eeedd904e0e6340d',
-  measurementId: 'G-ECC718YS2N',
+  apiKey: APIKEY,
+  authDomain: AUTHDOMAIN,
+  databaseURL: DATABASEURL,
+  projectId: PROJECTID,
+  storageBucket: STORAGEBUCKET,
+  messagingSenderId: MESSAGINGSENDERID,
+  appId: APPID,
+  measurementId: MEASUREMENTID,
 };
 
 firebase.initializeApp(firebaseConfig);

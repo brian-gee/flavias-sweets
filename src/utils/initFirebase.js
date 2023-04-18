@@ -7,7 +7,7 @@ const messageId = uuidv4();
 const db = getDatabase(app);
 
 // Add customer
-export const addMessage = (name: string, email: string, message: string) => {
+export const addMessage = (name, email, message) => {
   set(ref(db, 'messages/' + messageId), {
     messageId: messageId,
     name: name,

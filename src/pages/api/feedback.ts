@@ -1,4 +1,3 @@
-import 
 import type { APIRoute } from 'astro';
 
 export const post: APIRoute = async ({ request }) => {

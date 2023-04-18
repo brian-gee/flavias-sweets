@@ -1,11 +1,4 @@
 import { initializeApp } from 'firebase/app';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import {
-  GoogleAuthProvider,
-  signInWithRedirect,
-  signOut,
-  getAuth,
-} from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBynkTp6c_sEhEF6e-EZ7fLayy28_i70YI',
@@ -19,23 +12,3 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-
-export const AuthContextProvider = () => {
-  const provider = new GoogleAuthProvider();
-  const auth = getAuth(app);
-  const [user] = useAuthState(auth);
-
-  const signInWithGoogle = () => {
-    signInWithRedirect(auth, provider);
-  };
-
-  const logOut = () => {
-    signOut(auth);
-  };
-
-  const handleSignIn = () => {
-    user ? logOut : logOut;
-  };
-
-  return { user, signInWithGoogle, logOut, handleSignIn };
-};

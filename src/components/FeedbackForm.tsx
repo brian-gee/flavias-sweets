@@ -1,4 +1,5 @@
 import { useState } from 'preact/hooks';
+import firebase from '../utils/firebaseConfig';
 
 export default function Form() {
   const [responseMessage, setResponseMessage] = useState('');
@@ -6,13 +7,22 @@ export default function Form() {
   async function submit(e: SubmitEvent) {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    const response = await fetch('/api/feedback', {
-      method: 'POST',
-      body: formData,
-    });
-    const data = await response.json();
-    if (data.message) {
-      setResponseMessage(data.message);
+
+    const data = {
+      firstName: formData.get('first-name'),
+      lastName: formData.get('last-name'),
+      email: formData.get('email'),
+      phoneNumber: formData.get('phone-number'),
+      country: formData.get('country'),
+      message: formData.get('message'),
+    };
+
+    try {
+      await firebase.database().ref('feedback').push(data);
+      setResponseMessage('Thank you for your feedback!');
+    } catch (error) {
+      setResponseMessage('An error occurred. Please try again later.');
+      console.error('Error submitting form data:', error);
     }
   }
 

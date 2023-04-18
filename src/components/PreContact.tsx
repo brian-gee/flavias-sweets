@@ -1,25 +1,37 @@
-import { h, Component } from 'preact';
+import { useState } from 'preact/hooks';
 
-export default class PreContact extends Component {
-  state = { value: '' };
+export default function Form() {
+  const [responseMessage, setResponseMessage] = useState('');
 
-  onSubmit = (e) => {
-    alert('Submitted a todo');
+  async function submit(e: SubmitEvent) {
     e.preventDefault();
-  };
-
-  onInput = (e) => {
-    const { value } = e.target;
-    this.setState({ value });
-  };
-
-  render(_, { value }) {
-    return (
-      <form onSubmit={this.onSubmit}>
-        <input type="text" value={value} onInput={this.onInput} />
-        <p>You typed this value: {value}</p>
-        <button type="submit">Submit</button>
-      </form>
-    );
+    const formData = new FormData(e.target as HTMLFormElement);
+    const response = await fetch('/api/feedback', {
+      method: 'POST',
+      body: formData,
+    });
+    const data = await response.json();
+    if (data.message) {
+      setResponseMessage(data.message);
+    }
   }
+
+  return (
+    <form onSubmit={submit}>
+      <label>
+        Name
+        <input type="text" id="name" name="name" required />
+      </label>
+      <label>
+        Email
+        <input type="text" id="email" name="email" required />
+      </label>
+      <label>
+        Message
+        <textarea id="message" name="message" required />
+      </label>
+      <button>Send</button>
+      {responseMessage && <p>{responseMessage}</p>}
+    </form>
+  );
 }

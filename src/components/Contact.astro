@@ -7,7 +7,7 @@ if (Astro.request.method === 'POST') {
     const name = data.get('username');
     const email = data.get('email');
     const password = data.get('password');
-    addMessage(name, email, password);
+
     if (typeof name !== 'string' || name.length < 1) {
       errors.username += 'Please enter a username. ';
     }
@@ -16,6 +16,14 @@ if (Astro.request.method === 'POST') {
     }
     if (typeof password !== 'string' || password.length < 6) {
       errors.password += 'Password must be at least 6 characters. ';
+    }
+
+    if (
+      errors.username === '' &&
+      errors.email === '' &&
+      errors.password === ''
+    ) {
+      addMessage(name as string, email as string, password as string);
     }
   } catch (error) {
     if (error instanceof Error) {

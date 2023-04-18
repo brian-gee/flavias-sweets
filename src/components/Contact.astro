@@ -14,18 +14,15 @@ if (Astro.request.method === 'POST') {
 <form method="POST">
   <label>
     Username:
-    <input type="text" name="username" />
+    <input type="text" name="username" required />
   </label>
-  {errors.username && <p>{errors.username}</p>}
   <label>
     Email:
     <input type="email" name="email" required />
   </label>
-  {errors.email && <p>{errors.email}</p>}
   <label>
     Password:
     <input type="password" name="password" required minlength="6" />
   </label>
-  {errors.password && <p>{errors.password}</p>}
-  <button>Register</button>
+  <button>Submit</button>
 </form>

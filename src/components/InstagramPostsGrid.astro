@@ -1,14 +1,22 @@
 ---
 import { fetchInstagramPosts } from '../utils/instagram.js';
 
-const numberOfPosts = 9;
+interface Post {
+  media_type: string;
+  permalink: string;
+  video_url?: string;
+  caption?: string;
+  thumbnail_url?: string;
+  media_url: string;
+}
 
-const posts = await fetchInstagramPosts(numberOfPosts);
+const numberOfPosts = 9;
+const posts: Post[] = await fetchInstagramPosts(numberOfPosts);
 ---
 
 <section class="grid grid-cols-3 gap-4">
   {
-    posts.map((post) => (
+    posts.map((post: Post) => (
       <a
         href={post.permalink}
         target="_blank"
@@ -17,14 +25,11 @@ const posts = await fetchInstagramPosts(numberOfPosts);
         {post.media_type === 'VIDEO' ? (
           <video
             src={post.video_url}
-            alt={
-              post.caption ? post.caption.substring(0, 100) : 'Instagram Video'
-            }
             class="absolute inset-0 w-full h-full object-cover"
             controls
             preload="metadata"
             poster={post.thumbnail_url || post.media_url}
-            autoplay
+            autoPlay
             muted
             loop
             style="object-fit: cover;"

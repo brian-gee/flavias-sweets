@@ -8,7 +8,7 @@ export const addMessage = (name, email, message) => {
   const messageId = uuidv4();
   const dateTime = new Date().toISOString();
 
-  set(ref(db, 'messages/' + messageId), {
+  set(ref(db, 'messages/' + dateTime), {
     dateTime: dateTime,
     messageId: messageId,
     name: name,

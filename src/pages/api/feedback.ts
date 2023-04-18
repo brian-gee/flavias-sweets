@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import addMessage from '../../utils/initFirebase';
+import { addMessage } from '../../utils/initFirebase';
 
 export const post: APIRoute = async ({ request }) => {
   const data = await request.formData();
@@ -16,7 +16,7 @@ export const post: APIRoute = async ({ request }) => {
     );
   }
   // Add the message to the database
-  await addMessage(name, email, message);
+  addMessage(name, email, message);
   // Do something with the data, then return a success response
   return new Response(
     JSON.stringify({

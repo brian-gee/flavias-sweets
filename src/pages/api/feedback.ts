@@ -15,6 +15,8 @@ export const post: APIRoute = async ({ request }) => {
       { status: 400 }
     );
   }
+  // Add the message to the database
+  await addMessage(name, email, message);
   // Do something with the data, then return a success response
   return new Response(
     JSON.stringify({

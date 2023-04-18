@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^2.2.2",
-    "@astrojs/preact": "^2.1.0",
-    "@astrojs/svelte": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
     "astro": "^2.2.3",
     "astro-navbar": "^1.1.5",

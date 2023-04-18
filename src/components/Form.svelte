@@ -1,4 +1,5 @@
 <script lang="ts">
+  
   let responseMessage: string;
 
   async function submit(e: SubmitEvent) {
@@ -20,7 +21,7 @@
   </label>
   <label>
     Email
-    <input type="email" id="email" name="email" required />
+    <input type="text" id="email" name="email" required />
   </label>
   <label>
     Message

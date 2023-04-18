@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import addMessage from '../../utils/initFirebase';
 
 export const post: APIRoute = async ({ request }) => {
   const data = await request.formData();

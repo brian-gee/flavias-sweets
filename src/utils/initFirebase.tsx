@@ -5,14 +5,10 @@ const db = getDatabase(app);
 const dbRef = ref(db, 'contactForm');
 
 // Add customer
-export const addMessage = (
-  firstName: string,
-  lastName: string,
-  message: string
-) => {
+export const addMessage = (name: string, email: string, message: string) => {
   set(ref(db), {
-    first_name: firstName,
-    last_name: lastName,
+    name: name,
+    email: email,
     message: message,
   });
 };

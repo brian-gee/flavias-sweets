@@ -6,9 +6,24 @@ const db = getDatabase(app);
 
 // Add customer
 export const addMessage = (name, email, message) => {
-  const messageId = uuidv4();
+  var messageId = uuidv4();
+  let current = new Date();
+  let cDate =
+    current.getFullYear() +
+    '-' +
+    (current.getMonth() + 1) +
+    '-' +
+    current.getDate();
+  let cTime =
+    current.getHours() +
+    ':' +
+    current.getMinutes() +
+    ':' +
+    current.getSeconds();
+  let dateTime = cDate + ' ' + cTime;
 
   set(ref(db, 'messages/' + messageId), {
+    dateTime: dateTime,
     messageId: messageId,
     name: name,
     email: email,

@@ -8,12 +8,7 @@
   </p>
 </div>
 
-<form
-  action="/form"
-  method="POST"
-  data-netlify="true"
-  name="tattoo-inquiry"
-  class="mx-auto max-w-4xl mb-10 md:mb-20">
+<form onSubmit={submit} class="mx-auto max-w-4xl mb-10 md:mb-20">
   <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mx-6">
     <div>
       <label for="first-name" class="block text-sm font-semibold leading-6"
@@ -102,5 +97,6 @@
       class="w-full mt-4 py-4 text-white bg-pink-400 hover:bg-pink-500 rounded-2xl focus:outline-none">
       Send Message
     </button>
+    {responseMessage && <p>{responseMessage}</p>}
   </div>
 </form>

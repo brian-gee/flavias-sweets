@@ -1,12 +1,12 @@
+export const prerender = true;
 import type { APIRoute } from 'astro';
 import { addMessage } from '../../utils/initFirebase';
 
 export const post: APIRoute = async ({ request }) => {
   const data = await request.formData();
-  const name = data.get('name');
-  const email = data.get('email');
-  const message = data.get('message');
-  // Validate the data - you'll probably want to do more than this
+  const name = data.get('name')?.toString();
+  const email = data.get('email')?.toString();
+  const message = data.get('message')?.toString();
   if (!name || !email || !message) {
     return new Response(
       JSON.stringify({
@@ -15,7 +15,6 @@ export const post: APIRoute = async ({ request }) => {
       { status: 400 }
     );
   }
-  // Do something with the data, then return a success response
   addMessage(name, email, message);
   return new Response(
     JSON.stringify({

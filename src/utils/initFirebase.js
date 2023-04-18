@@ -4,23 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 const db = getDatabase(app);
 
-// Add customer
 export const addMessage = (name, email, message) => {
-  var messageId = uuidv4();
-  let current = new Date();
-  let cDate =
-    current.getFullYear() +
-    '-' +
-    (current.getMonth() + 1) +
-    '-' +
-    current.getDate();
-  let cTime =
-    current.getHours() +
-    ':' +
-    current.getMinutes() +
-    ':' +
-    current.getSeconds();
-  let dateTime = cDate + ' ' + cTime;
+  const messageId = uuidv4();
+  const dateTime = new Date().toISOString();
 
   set(ref(db, 'messages/' + messageId), {
     dateTime: dateTime,

@@ -21,8 +21,15 @@ function submitForm(e) {
   var firstName = getElementVal('first-name');
   var lastName = getElementVal('last-name');
   var message = getElementVal('message');
-
-  console.log(firstName, lastName, message);
-
-  const getElementVal = (id) => document.getElementById(id).value;
+  saveContactForm(firstName, lastName, message);
 }
+
+const saveContactForm = (firstName, lastName, message) => {
+  const newContactForm = contactFormDB.push();
+  newContactForm.set({
+    firstName: firstName,
+    lastName: lastName,
+    message: message,
+  });
+  const getElementVal = (id) => document.getElementById(id).value;
+};

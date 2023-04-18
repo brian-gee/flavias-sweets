@@ -1,10 +1,11 @@
 <script lang="ts">
-  
+  import type { SubmitEvent } from "@types/svelte";
+
   let responseMessage: string;
 
   async function submit(e: SubmitEvent) {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    const formData = new FormData(e.target as HTMLFormElement);
     const response = await fetch("/api/feedback", {
       method: "POST",
       body: formData,
@@ -21,7 +22,7 @@
   </label>
   <label>
     Email
-    <input type="text" id="email" name="email" required />
+    <input type="text" id="email" name="email" required name="email" />
   </label>
   <label>
     Message

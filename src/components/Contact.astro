@@ -18,13 +18,7 @@ if (Astro.request.method === 'POST') {
       errors.password += 'Password must be at least 6 characters. ';
     }
 
-    if (
-      errors.username === '' &&
-      errors.email === '' &&
-      errors.password === ''
-    ) {
-      addMessage(name as string, email as string, password as string);
-    }
+    addMessage(name as string, email as string, password as string);
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);

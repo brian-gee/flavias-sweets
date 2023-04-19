@@ -23,7 +23,7 @@ export const addMessage = async (
       to: userEmail,
       message: {
         subject: "New message from Flavias's Sweets!",
-        text: message,
+        text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phoneNumber}\n\nMessage:\n${message}`,
       },
     });
   } catch (error) {

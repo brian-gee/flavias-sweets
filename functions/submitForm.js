@@ -14,19 +14,13 @@ const firebaseConfig = {
   measurementId: 'G-ECC718YS2N',
 };
 
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 const userEmail = 'briangeertsma@gmail.com';
 
 // Add customer
-export const addMessage = async (
-  firstName,
-  lastName,
-  email,
-  phoneNumber,
-  message
-) => {
+const addMessage = async (firstName, lastName, email, phoneNumber, message) => {
   const messageId = uuidv4();
   const dateTime = new Date().toISOString();
 

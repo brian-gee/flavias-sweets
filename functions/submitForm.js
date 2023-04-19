@@ -56,12 +56,6 @@ exports.handler = async function (event, context) {
     const message = data.get('message');
 
     await addMessage(firstName, lastName, email, phoneNumber, message);
-
-    if (response.status === 204) {
-      location.href = '/success';
-    } else {
-      console.error('An error occurred while submitting the form');
-    }
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);

@@ -6,7 +6,13 @@ const db = getFirestore(app);
 const userEmail = 'briangeertsma@gmail.com';
 
 // Add customer
-export const addMessage = async (name, email, message) => {
+export const addMessage = async (
+  firstName,
+  lastName,
+  email,
+  phoneNumber,
+  message
+) => {
   const messageId = uuidv4();
   const dateTime = new Date().toISOString();
 
@@ -16,8 +22,8 @@ export const addMessage = async (name, email, message) => {
       messageId: messageId,
       to: userEmail,
       message: {
-        subject: 'Hello from Firebase!',
-        text: name,
+        subject: "New message from Flavias's Sweets!",
+        text: message,
       },
     });
   } catch (error) {

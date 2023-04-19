@@ -1,10 +1,6 @@
-import { addMessage } from '../utils/initFirebase';
+import { addMessage } from './initFirebase';
 
 exports.handler = async function (event, context) {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
-  }
-
   try {
     const data = JSON.parse(event.body);
     const { name, email, password } = data;

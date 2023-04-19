@@ -56,6 +56,8 @@ exports.handler = async function (event, context) {
     const message = data.get('message');
 
     await addMessage(firstName, lastName, email, phoneNumber, message);
+    window.location.href = '/success';
+
     return {
       statusCode: 204,
       body: '',

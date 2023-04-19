@@ -4,19 +4,15 @@ import { addMessage } from '../utils/initFirebase';
 if (Astro.request.method === 'POST') {
   try {
     const data = await Astro.request.formData();
-    const firstName = data.get('username');
-    const lastName = data.get('email');
-    const email = data.get('password');
-    const phoneNumber = data.get('password');
-    const message = data.get('password');
+    const firstName = data.get('first-name');
+    const lastName = data.get('last-name');
+    const email = data.get('email');
+    const phoneNumber = data.get('phone-number');
+    const message = data.get('message');
 
-    addMessage(
-      firstName as string,
-      lastName as string,
-      email as string,
-      phoneNumber as string,
-      message as string
-    );
+    await addMessage(firstName, lastName, email, phoneNumber, message);
+
+    return Astro.redirect('/success');
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -25,7 +21,7 @@ if (Astro.request.method === 'POST') {
 }
 ---
 
-<form action="" method="post" class="mx-auto max-w-4xl mb-10 md:mb-20">
+<form method="post" class="mx-auto max-w-4xl mb-10 md:mb-20">
   <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mx-6">
     <div>
       <label for="first-name" class="block text-sm font-semibold leading-6">

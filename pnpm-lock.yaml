@@ -13,6 +13,9 @@ dependencies:
   '@firebase/app':
     specifier: ^0.9.8
     version: 0.9.8
+  '@firebase/app-compat':
+    specifier: ^0.2.8
+    version: 0.2.8
   '@firebase/database':
     specifier: ^0.14.4
     version: 0.14.4
@@ -710,6 +713,16 @@ packages:
     resolution: {integrity: sha512-KYBUKoRrvSGW8jqKgARRsma0lJie9M0zyWhPF3PNjqc9pYsw7SZXp5s5SzsheeCXzIDFydP5uEA4f1Z87D7CxQ==}
     dependencies:
       '@firebase/app': 0.9.7
+      '@firebase/component': 0.6.4
+      '@firebase/logger': 0.4.0
+      '@firebase/util': 1.9.3
+      tslib: 2.5.0
+    dev: false
+
+  /@firebase/app-compat@0.2.8:
+    resolution: {integrity: sha512-aG9juNXD+m8gWs6VnrLUWWV1LtJu8W0+uyX5u+Sz6YjDO69JN2jEaxCsb7Wr1egXKKJN1YrhoS+0kQqWakp61Q==}
+    dependencies:
+      '@firebase/app': 0.9.8
       '@firebase/component': 0.6.4
       '@firebase/logger': 0.4.0
       '@firebase/util': 1.9.3

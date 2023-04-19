@@ -55,6 +55,11 @@ exports.handler = async function (event, context) {
     const message = data.get('message');
 
     await addMessage(firstName, lastName, email, phoneNumber, message);
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: 'Form submitted successfully' }),
+    };
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);

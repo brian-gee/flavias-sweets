@@ -29,7 +29,7 @@ if (Astro.request.method === 'POST') {
       Send us a message about your next party so we can get started on your
       custom cake.
     </p>
-    <form method="post" class="mx-auto max-w-4xl mb-10 md:mb-20">
+    <form id="contact-form" class="mx-auto max-w-4xl mb-10 md:mb-20">
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mx-6">
         <div>
           <label for="first-name" class="block text-sm font-semibold leading-6">
@@ -145,3 +145,37 @@ if (Astro.request.method === 'POST') {
     </form>
   </div>
 </div>
+
+<script>
+  const contactForm = document.getElementById('contact-form');
+
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the form from submitting the default way
+
+    const formData = new FormData(contactForm);
+    const data = new URLSearchParams();
+    for (const [key, value] of formData) {
+      data.append(key, value);
+    }
+
+    try {
+      const response = await fetch('/.netlify/functions/yourFunctionName', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: data,
+      });
+
+      if (response.ok) {
+        // Redirect to the desired page after a successful submission
+        window.location.href = '/thank-you';
+      } else {
+        // Handle the error response
+        console.error('Error submitting the form:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+    }
+  });
+</script>

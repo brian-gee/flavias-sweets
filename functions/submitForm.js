@@ -19,7 +19,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const userEmail = 'briangeertsma@gmail.com';
 
-// Add customer
 const addMessage = async (firstName, lastName, email, phoneNumber, message) => {
   const messageId = uuidv4();
   const dateTime = new Date().toISOString();
@@ -31,7 +30,7 @@ const addMessage = async (firstName, lastName, email, phoneNumber, message) => {
       to: userEmail,
       message: {
         subject: "New message from Flavias's Sweets!",
-        text: message,
+        text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phoneNumber}\n\nMessage:\n${message}`,
       },
     });
   } catch (error) {

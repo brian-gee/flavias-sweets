@@ -1,8 +1,6 @@
 ---
 import { addMessage } from '../utils/initFirebase';
 
-let formSubmitted = false;
-
 if (Astro.request.method === 'POST') {
   try {
     const data = await Astro.request.formData();
@@ -13,7 +11,6 @@ if (Astro.request.method === 'POST') {
     const message = data.get('message');
 
     await addMessage(firstName, lastName, email, phoneNumber, message);
-    formSubmitted = true;
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -40,6 +37,7 @@ if (Astro.request.method === 'POST') {
           </label>
           <div class="mt-2.5">
             <input
+              required
               type="text"
               name="first-name"
               id="first-name"
@@ -54,6 +52,7 @@ if (Astro.request.method === 'POST') {
           </label>
           <div class="mt-2.5">
             <input
+              required
               type="text"
               name="last-name"
               id="last-name"
@@ -68,6 +67,7 @@ if (Astro.request.method === 'POST') {
           </label>
           <div class="mt-2.5">
             <input
+              required
               type="email"
               name="email"
               id="email"
@@ -95,6 +95,7 @@ if (Astro.request.method === 'POST') {
               </select>
             </div>
             <input
+              required
               type="tel"
               name="phone-number"
               id="phone-number"
@@ -109,6 +110,7 @@ if (Astro.request.method === 'POST') {
           </label>
           <div class="mt-2.5">
             <textarea
+              required
               name="message"
               id="message"
               rows="4"
@@ -143,11 +145,3 @@ if (Astro.request.method === 'POST') {
     </form>
   </div>
 </div>
-
-<script>
-  if ('{{formSubmitted}}' === 'true') {
-    setTimeout(() => {
-      location.href = '/success';
-    }, 2000);
-  }
-</script>

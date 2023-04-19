@@ -1,14 +1,23 @@
 exports.handler = async function (event, context) {
   try {
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Message added successfully.' }),
-    };
-  } catch (error) {
-    console.error('Error adding message:', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Error adding message.' }),
-    };
-  }
+    try {
+      const data = await Astro.request.formData();
+      const firstName = data.get('username');
+      const lastName = data.get('email');
+      const email = data.get('password');
+      const phoneNumber = data.get('password');
+      const message = data.get('password');
+  
+      addMessage(
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        message 
+      );
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      }
+    }
 };

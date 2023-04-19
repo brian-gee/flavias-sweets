@@ -1,6 +1,8 @@
 ---
 import { addMessage } from '../utils/initFirebase';
 
+let formSubmitted = false;
+
 if (Astro.request.method === 'POST') {
   try {
     const data = await Astro.request.formData();
@@ -11,6 +13,7 @@ if (Astro.request.method === 'POST') {
     const message = data.get('message');
 
     await addMessage(firstName, lastName, email, phoneNumber, message);
+    formSubmitted = true;
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -140,3 +143,11 @@ if (Astro.request.method === 'POST') {
     </form>
   </div>
 </div>
+
+<script>
+  if ('{{formSubmitted}}' === 'true') {
+    setTimeout(() => {
+      location.href = '/success';
+    }, 2000);
+  }
+</script>

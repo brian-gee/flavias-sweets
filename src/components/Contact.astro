@@ -11,8 +11,6 @@ if (Astro.request.method === 'POST') {
     const message = data.get('message');
 
     await addMessage(firstName, lastName, email, phoneNumber, message);
-
-    return Astro.redirect('/success');
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);

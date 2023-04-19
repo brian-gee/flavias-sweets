@@ -8,7 +8,6 @@ exports.handler = async function (event, context) {
     const message = data.get('message');
 
     await addMessage(firstName, lastName, email, phoneNumber, message);
-    return Astro.redirect('/success');
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);

@@ -7,6 +7,8 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 const { title } = Astro.props;
+const makeTitle =
+  "title ? title + ' | ' + 'Flavia's Sweets' : 'Flavia's Sweets";
 ---
 
 <!DOCTYPE html>
@@ -17,7 +19,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>
-      {title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets"}
+      {makeTitle}
     </title>
   </head>
   <body>

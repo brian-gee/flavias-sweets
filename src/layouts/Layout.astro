@@ -7,8 +7,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 const { title } = Astro.props;
-const makeTitle =
-  "title ? title + ' | ' + 'Flavia's Sweets' : 'Flavia's Sweets";
+const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
 ---
 
 <!DOCTYPE html>

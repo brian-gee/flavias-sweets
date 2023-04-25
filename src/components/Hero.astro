@@ -1,11 +1,16 @@
-<div class="px-12 mx-auto max-w-7xl xl:pt-20">
-  <div class="w-full mx-auto text-left md:w-11/12 md:text-center">
+---
+import { fetchIndividualPost } from '../utils/instagram.js';
+
+const post = await fetchIndividualPost();
+---
+
+<div class="w-full mx-auto text-left md:w-11/12 grid grid-cols-2">
+  <div>
     <h1
-      class="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-      <span>Cherished</span>
-      <span class="inline text-pink-400">Confections</span>
+      class="mb-8 text-4xl font-extrabold leading-none tracking-normal md:text-6xl md:tracking-tight">
+      <span class="text-pink-400">Cherished Confections</span>
     </h1>
-    <p class="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">
+    <p class="mb-8 text-lg text-gray-600 md:text-xl">
       Celebrate with our deliciously crafted sweets, perfect for creating
       memories that last a lifetime. Uncover the secret to unforgettable
       parties!
@@ -18,8 +23,40 @@
       </a>
       <a
         href=""
-        class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg bg-gray-100 rounded-2xl sm:w-auto sm:mb-0">
+        class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg bg-gray-200 hover:bg-gray-300 rounded-2xl sm:w-auto sm:mb-0">
         Learn More
+      </a>
+    </div>
+    <div>
+      <a
+        href={post.permalink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full h-0 pb-[100%] relative">
+        {
+          post.media_type === 'VIDEO' ? (
+            <video
+              width="100%"
+              height="100%"
+              src={post.video_url}
+              class="absolute inset-0 w-full h-full object-cover"
+              controls
+              preload="metadata"
+              poster={post.thumbnail_url || post.media_url}
+              style="object-fit: cover;"
+            />
+          ) : (
+            <img
+              width="100%"
+              height="100%"
+              src={post.media_url}
+              alt={
+                post.caption ? post.caption.substring(0, 100) : 'Instagram Post'
+              }
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+          )
+        }
       </a>
     </div>
   </div>

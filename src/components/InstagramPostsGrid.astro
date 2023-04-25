@@ -4,7 +4,6 @@ import { fetchInstagramPosts } from '../utils/instagram.js';
 interface Post {
   media_type: string;
   permalink: string;
-  video_url?: string;
   caption?: string;
   thumbnail_url?: string;
   media_url: string;
@@ -28,7 +27,7 @@ const posts: Post[] = await fetchInstagramPosts(numberOfPosts);
               <video
                 width="100%"
                 height="100%"
-                src={post.video_url}
+                src={post.media_url}
                 class="absolute inset-0 w-full h-full object-cover"
                 controls
                 preload="metadata"

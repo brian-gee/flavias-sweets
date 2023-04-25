@@ -21,7 +21,7 @@ export async function fetchInstagramPosts(numberOfPosts) {
 export async function fetchIndividualPost() {
   try {
     const response = await fetch(
-      `https://graph.instagram.com/17883980327721176?fields=id,caption,media_type,media_url,thumbnail_url,video_url,permalink&access_token=${ACCESSTOKEN}`
+      `https://graph.instagram.com/17883980327721176?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${ACCESSTOKEN}`
     );
 
     const responseText = await response.text();
@@ -30,7 +30,7 @@ export async function fetchIndividualPost() {
     if (data.error) {
       throw new Error(data.error.message);
     }
-    return data.data;
+    return data; // Updated line
   } catch (error) {
     console.error('Error fetching Instagram posts:', error);
     return [];

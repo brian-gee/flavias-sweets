@@ -1,71 +1,37 @@
 ---
 import { fetchIndividualPost } from '../utils/instagram.js';
-
-interface Post {
-  media_type: string;
-  permalink: string;
-  caption?: string;
-  thumbnail_url?: string;
-  media_url: string;
-}
-
-const post: Post = await fetchIndividualPost();
+const postId = '18181813981252175';
+const post = await fetchIndividualPost(postId);
 ---
 
-<div class="w-full mx-auto text-left md:w-11/12 grid grid-cols-2">
-  <div>
-    <h1
-      class="mb-8 text-4xl font-extrabold leading-none tracking-normal md:text-6xl md:tracking-tight">
-      <span class="text-pink-400">Cherished Confections</span>
-    </h1>
-    <p class="mb-8 text-lg text-gray-600 md:text-xl">
-      Celebrate with our deliciously crafted sweets, perfect for creating
-      memories that last a lifetime. Uncover the secret to unforgettable
-      parties!
-    </p>
-    <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
-      <a
-        href="/contact"
-        class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg text-white bg-pink-400 hover:bg-pink-500 rounded-2xl sm:w-auto sm:mb-0">
-        Get Started
-      </a>
-      <a
-        href=""
-        class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg bg-gray-200 hover:bg-gray-300 rounded-2xl sm:w-auto sm:mb-0">
-        Learn More
-      </a>
+<section class="md:w-11/12 mx-auto">
+  <div class="container my-5">
+    <div
+      class="flex flex-wrap p-4 pb-0 pt-lg-5 items-center rounded-3 border shadow-lg">
+      <div class="w-full lg:w-7/12 p-3 lg:p-5 lg:pt-3">
+        <h1 class="text-4xl font-bold leading-tight">Cherished Confections</h1>
+        <p class="text-lg mt-4">
+          Quickly design and customize responsive mobile-first sites with
+          Bootstrap, the world’s most popular front-end open source toolkit,
+          featuring Sass variables and mixins, responsive grid system, extensive
+          prebuilt components, and powerful JavaScript plugins.
+        </p>
+        <div class="mt-4 lg:mt-3 space-y-2 md:space-y-0 md:space-x-2">
+          <button
+            type="button"
+            class="inline-flex items-center px-4 py-2 text-white bg-pink-400 hover:bg-pink-500 font-bold rounded-lg">
+            Primary
+          </button>
+          <button
+            type="button"
+            class="inline-flex items-center px-4 py-2 text-gray-700 border border-gray-300 rounded-lg">
+            Default
+          </button>
+        </div>
+      </div>
+      <div class="w-full lg:w-4/12 lg:ml-4 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3 w-full" src={post.media_url} alt="" />
+      </div>
     </div>
   </div>
-  <div>
-    <a
-      href={post.permalink}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="w-full h-auto relative">
-      {
-        post.media_type === 'VIDEO' ? (
-          <video
-            width="100%"
-            height="auto"
-            src={post.media_url}
-            class="absolute inset-0 w-full h-auto object-cover"
-            controls
-            preload="metadata"
-            poster={post.thumbnail_url || post.media_url}
-            style="object-fit: cover;"
-          />
-        ) : (
-          <img
-            width="100%"
-            height="auto"
-            src={post.media_url}
-            alt={
-              post.caption ? post.caption.substring(0, 100) : 'Instagram Post'
-            }
-            class="absolute inset-0 w-full h-auto object-cover"
-          />
-        )
-      }
-    </a>
-  </div>
-</div>
+</section>

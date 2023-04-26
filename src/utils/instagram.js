@@ -18,10 +18,10 @@ export async function fetchInstagramPosts(numberOfPosts) {
   }
 }
 
-export async function fetchIndividualPost() {
+export async function fetchIndividualPost(postId) {
   try {
     const response = await fetch(
-      `https://graph.instagram.com/17883980327721176?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${ACCESSTOKEN}`
+      `https://graph.instagram.com/${postId}?fields=id,caption,media_type,media_url,permalink,thumbnail_url&access_token=${ACCESSTOKEN}`
     );
 
     const responseText = await response.text();

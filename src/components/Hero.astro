@@ -4,34 +4,32 @@ const postId = '18181813981252175';
 const post = await fetchIndividualPost(postId);
 ---
 
-<section class="md:w-11/12 mx-auto">
-  <div class="container my-5">
-    <div
-      class="flex flex-wrap p-4 pb-0 pt-lg-5 items-center rounded-3 border shadow-lg">
-      <div class="w-full lg:w-7/12 p-3 lg:p-5 lg:pt-3">
-        <h1 class="text-4xl font-bold leading-tight">Cherished Confections</h1>
-        <p class="text-lg mt-4">
-          Quickly design and customize responsive mobile-first sites with
-          Bootstrap, the world’s most popular front-end open source toolkit,
-          featuring Sass variables and mixins, responsive grid system, extensive
-          prebuilt components, and powerful JavaScript plugins.
-        </p>
-        <div class="mt-4 lg:mt-3 space-y-2 md:space-y-0 md:space-x-2">
-          <button
-            type="button"
-            class="inline-flex items-center px-4 py-2 text-white bg-pink-400 hover:bg-pink-500 font-bold rounded-lg">
-            Primary
-          </button>
-          <button
-            type="button"
-            class="inline-flex items-center px-4 py-2 text-gray-700 border border-gray-300 rounded-lg">
-            Default
-          </button>
-        </div>
+<section class="md:w-11/12 mx-auto container h-screen">
+  <div class="flex flex-wrap p-8 items-center">
+    <div class="w-full lg:w-7/12 p-2">
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight">
+        Cherished Confections
+      </h1>
+      <p class="text-base md:text-lg mt-4">
+        Unlock the secret to creating unforgettable memories at your special
+        events with our exquisitely crafted sweets, designed to leave a lasting
+        impression on your guests and elevate your celebrations.
+      </p>
+      <div class="mt-4 lg:mt-3 space-y-2 md:space-y-0 md:space-x-2">
+        <button
+          type="button"
+          class="inline-flex items-center px-4 py-2 text-white bg-pink-400 hover:bg-pink-500 font-bold rounded-lg">
+          Let's bake
+        </button>
+        <button
+          type="button"
+          class="inline-flex items-center px-4 py-2 text-gray-700 border border-gray-700 rounded-lg">
+          More info
+        </button>
       </div>
-      <div class="w-full lg:w-4/12 lg:ml-4 p-0 overflow-hidden shadow-lg">
-        <img class="rounded-lg-3 w-full" src={post.media_url} alt="" />
-      </div>
+    </div>
+    <div class="w-full lg:w-4/12 lg:ml-8 mt-6 lg:mt-0">
+      <img class="rounded-lg w-full" src={post.media_url} alt="" />
     </div>
   </div>
 </section>

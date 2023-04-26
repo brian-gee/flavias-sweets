@@ -1,44 +1,87 @@
-<div class="container mx-auto px-4">
-  <header class="flex flex-wrap justify-center py-3 mb-4 border-b">
+---
+type MenuItem = {
+  title: string;
+  path: string;
+  blank?: boolean;
+  children?: MenuItem[];
+};
+
+const menuitems: MenuItem[] = [
+  {
+    title: 'Home',
+    path: '/',
+  },
+  {
+    title: 'About',
+    path: '/',
+  },
+  {
+    title: 'Contact',
+    path: '/contact',
+  },
+];
+---
+
+<div class="container mx-auto p-4">
+  <header class="flex flex-wrap justify-between items-center py-3 mb-4">
     <a
       href="/"
       class="flex items-center mb-3 md:mb-0 md:mr-auto text-dark no-underline">
-      <svg class="bi me-2" width="40" height="32">
-        <use xlink:href="#bootstrap"></use>
-      </svg>
-      <img class="w-12" src="/flavias-sweets.jpeg" alt="Flavia's Sweets Logo" />
-      <span class="fs-4">Flavia's Sweets</span>
+      <img
+        class="w-32 m:w-"
+        src="/flavias-sweets.jpeg"
+        alt="Flavia's Sweets Logo"
+      />
+      <!-- <span class="ml-2 text-xl md:text-2xl">Flavia's Sweets</span> -->
     </a>
 
-    <ul class="flex space-x-2">
-      <li class="nav-item">
-        <a
-          href="#"
-          class="nav-link px-2 py-1 text-gray-700 font-medium bg-gray-100 rounded"
-          >Home</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          href="#"
-          class="nav-link px-2 py-1 text-gray-700 font-medium hover:bg-gray-100 rounded"
-          >Services</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          href="#"
-          class="nav-link px-2 py-1 text-gray-700 font-medium hover:bg-gray-100 rounded"
-          >FAQs</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          href="#"
-          class="nav-link px-2 py-1 text-gray-700 font-medium hover:bg-gray-100 rounded"
-          >About</a
-        >
-      </li>
+    <ul class="hidden md:flex space-x-2">
+      {
+        menuitems.map((item) => (
+          <div class="px-5 py-2 inline-block">
+            <a
+              href={item.path}
+              target={item.blank ? '_blank' : '_self'}
+              class="nav-link text-gray-700 text-xl pr-2 rounded">
+              {item.title}
+            </a>
+          </div>
+        ))
+      }
     </ul>
+    <button class="md:hidden text-gray-700" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
   </header>
+
+  <ul class="hidden space-y-2 md:hidden" id="mobile-menu">
+    <li class="nav-item">
+      <a
+        href="#"
+        class="nav-link block px-2 py-1 text-gray-700 font-medium bg-gray-100 rounded"
+        >Home</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        href="#"
+        class="nav-link block px-2 py-1 text-gray-700 font-medium hover:bg-gray-100 rounded"
+        >Services</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        href="#"
+        class="nav-link block px-2 py-1 text-gray-700 font-medium hover:bg-gray-100 rounded"
+        >FAQs</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        href="#"
+        class="nav-link block px-2 py-1 text-gray-700 font-medium hover:bg-gray-100 rounded"
+        >About</a
+      >
+    </li>
+  </ul>
 </div>

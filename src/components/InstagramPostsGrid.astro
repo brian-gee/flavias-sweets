@@ -33,6 +33,7 @@ const posts: Post[] = await fetchInstagramPosts(numberOfPosts);
                 preload="metadata"
                 poster={post.thumbnail_url || post.media_url}
                 style="object-fit: cover;"
+                muted
               />
             ) : (
               <img
@@ -44,7 +45,7 @@ const posts: Post[] = await fetchInstagramPosts(numberOfPosts);
                     ? post.caption.substring(0, 100)
                     : 'Instagram Post'
                 }
-                class="absolute inset-0 w-full h-full object-cover"
+                class="rounded-lg absolute inset-0 w-full h-full object-cover"
               />
             )}
           </a>

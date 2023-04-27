@@ -29,7 +29,16 @@ if (Astro.request.method === 'POST') {
       Send us a message about your next party so we can get started on your
       custom cake.
     </p>
-    <form id="contact-form" class="mx-auto max-w-4xl mb-10 md:mb-20">
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="mx-auto max-w-4xl mb-10 md:mb-20">
+      <input
+        type="hidden"
+        name="access_key"
+        value="795bef11-df67-4a28-93d3-bbe7d6c7dc6e"
+      />
+
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mx-6">
         <div>
           <label for="first-name" class="block text-sm font-semibold leading-6">
@@ -117,27 +126,30 @@ if (Astro.request.method === 'POST') {
               class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-black placeholder:text-black sm:text-sm sm:leading-6"
             ></textarea>
           </div>
-        </div>
-        <div class="sm:col-span-2">
+          <!-- <div class="sm:col-span-2">
           <label
             for="file-upload"
             class="block text-sm font-semibold leading-6">
             Upload file (max 25MB)
           </label>
-          <div class="mt-2.5">
+          <div class="mt-2.5">             
             <input
               type="file"
-              name="file-upload"
+              name="attachment"
               id="file-upload"
               accept="*"
               class="block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-black placeholder:text-black sm:text-sm sm:leading-6"
             />
           </div>
-        </div>
-        <div>
+      </div>-->
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://web3forms.com/success"
+          />
           <button
             type="submit"
-            class="w-full mt-4 py-4 text-white bg-pink-400 hover:bg-pink-500 rounded-2xl focus:outline-none">
+            class="w-full mt-4 py-4 text-white bg-pink-400 hover:bg-pink-500 rounded-2xl">
             Send Message
           </button>
         </div>

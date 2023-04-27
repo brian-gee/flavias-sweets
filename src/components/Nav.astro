@@ -48,7 +48,7 @@ const menuitems: MenuItem[] = [
     <ul class="items-center hidden space-x-8 lg:flex">
       {
         menuitems.map((item) => (
-          <li class="nav-item">
+          <li class="">
             <a
               href={item.path}
               target={item.blank ? '_blank' : '_self'}
@@ -63,7 +63,7 @@ const menuitems: MenuItem[] = [
       <li>
         <a
           href="/contact"
-          class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+          class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide rounded shadow-md bg-pink-500 text-white"
           aria-label="Contact"
           title="Contact">
           Contact
@@ -101,7 +101,7 @@ const menuitems: MenuItem[] = [
                 title="Company"
                 class="inline-flex items-center">
                 <svg
-                  class="w-8 text-deep-purple-accent-400"
+                  class="w-8 text-pink-500"
                   viewBox="0 0 24 24"
                   stroke-linejoin="round"
                   stroke-width="2"
@@ -115,8 +115,8 @@ const menuitems: MenuItem[] = [
                   <rect x="14" y="11" width="7" height="12"></rect>
                 </svg>
                 <span
-                  class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase"
-                  >Company</span
+                  class="ml-2 text-xl font-bold tracking-wide text-pink-500 uppercase"
+                  >Flavia's Sweets</span
                 >
               </a>
             </div>
@@ -124,8 +124,8 @@ const menuitems: MenuItem[] = [
               <button
                 aria-label="Close Menu"
                 title="Close Menu"
-                class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                class="p-2 -mt-2 -mr-2 transition duration-200 rounded">
+                <svg class="w-5 text-pink-500" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
                     d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
@@ -144,7 +144,7 @@ const menuitems: MenuItem[] = [
                       target={item.blank ? '_blank' : '_self'}
                       aria-label={item.title}
                       title={item.title}
-                      class="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400">
+                      class="font-medium tracking-wide">
                       {item.title}
                     </a>
                   </li>
@@ -153,7 +153,7 @@ const menuitems: MenuItem[] = [
               <li>
                 <a
                   href="/"
-                  class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide transition duration-200 rounded"
+                  class="h-12 px-6 font-medium tracking-wide transition duration-200 rounded"
                   aria-label="Contact"
                   title="Contact">
                   Contact

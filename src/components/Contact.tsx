@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Contact = () => {
-  const [subject, setSubject] = useState('');
+  const [subject, setSubject] = useState("New message from Flavia's Sweets!");
 
   const handleFirstNameChange = (e) => {
     const firstName = e.target.value;
@@ -27,7 +27,7 @@ const Contact = () => {
             name="access_key"
             value="795bef11-df67-4a28-93d3-bbe7d6c7dc6e"
           />
-          <input type="hidden" name="subject" value="This is a test subject" />
+          <input type="hidden" name="subject" value={subject} />
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mx-6">
             <div>
               <label

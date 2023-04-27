@@ -1,0 +1,37 @@
+---
+import { fetchIndividualPost } from '../utils/instagram.js';
+const postId = '18181813981252175';
+const post = await fetchIndividualPost(postId);
+---
+
+<section class="md:w-11/12 mx-auto container">
+  <div class="flex flex-wrap p-8">
+    <div class="w-full lg:w-4/12 lg:mr-8 mt-6 lg:mt-0">
+      <img
+        class="rounded-lg w-full max-w-xl"
+        src={post.media_url}
+        alt={post.caption}
+      />
+    </div>
+    <div class="w-full lg:w-7/12 p-2">
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight">
+        Problem/Solution Section
+      </h1>
+      <p class="md:text-xl mt-4">
+        <span class="font-bold">Talk about the main pain point.</span>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, perspiciatis?
+      </p>
+      <p class="md:text-md mt-4">
+        <span class="font-bold">Agitate with examples.</span>
+        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores
+        sed doloremque at quaerat, soluta reprehenderit modi
+      </p>
+      <p class="md:text-md mt-2">
+        <span class="font-bold">Introduce your solution.</span>
+        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </div>
+  </div>
+</section>

@@ -15,6 +15,10 @@ const menuitems: MenuItem[] = [
     title: 'About',
     path: '/',
   },
+  {
+    title: 'Navigation',
+    path: '/',
+  },
 ];
 ---
 
@@ -41,9 +45,7 @@ const menuitems: MenuItem[] = [
         <rect x="14" y="1" width="7" height="6"></rect>
         <rect x="14" y="11" width="7" height="12"></rect>
       </svg>
-      <span class="ml-2 text-xl font-bold tracking-wide text-pink-500"
-        >Flavia's Sweets</span
-      >
+      <span class="ml-2 text-xl font-bold tracking-wide">Flavia's Sweets</span>
     </a>
     <ul class="items-center hidden space-x-8 lg:flex">
       {
@@ -63,7 +65,7 @@ const menuitems: MenuItem[] = [
       <li>
         <a
           href="/contact"
-          class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide rounded shadow-md bg-pink-500 text-white"
+          class="inline-flex items-center justify-center h-10 px-6 font-medium tracking-wide rounded shadow-md bg-pink-500 text-white"
           aria-label="Contact"
           title="Contact">
           Contact
@@ -97,8 +99,8 @@ const menuitems: MenuItem[] = [
             <div>
               <a
                 href="/"
-                aria-label="Company"
-                title="Company"
+                aria-label="Flavia's Sweets"
+                title="Flavia's Sweets"
                 class="inline-flex items-center">
                 <svg
                   class="w-8 text-pink-500"

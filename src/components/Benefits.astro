@@ -1,14 +1,36 @@
+---
+import { Icon } from 'astro-icon';
+
+type BulletItem = {
+  text: string;
+  icon: string;
+  children?: BulletItem[];
+};
+
+const bulletItems: BulletItem[] = [
+  {
+    text: 'Saves you time',
+    icon: 'ic:round-check',
+  },
+  {
+    text: 'Saves you money',
+    icon: 'ic:round-check',
+  },
+  {
+    text: 'Saves your party',
+    icon: 'ic:round-check',
+  },
+];
+---
+
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:text-center">
-      <h2 class="text-base font-semibold leading-7 text-indigo-600">
-        Deploy faster
-      </h2>
       <p
-        class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        class="mb-8 text-4xl font-bold leading-none tracking-tighter lg:text-5xl">
         Everything you need to deploy your app
       </p>
-      <p class="mt-6 text-lg leading-8 text-gray-600">
+      <p class="mb-2 text-base leading-relaxed text-left">
         Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
         Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In
         mi viverra elit nunc.
@@ -20,7 +42,7 @@
         <div class="relative pl-16">
           <dt class="text-base font-semibold leading-7 text-gray-900">
             <div
-              class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+              class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-pink-500">
               <svg
                 class="h-6 w-6 text-white"
                 fill="none"
@@ -37,7 +59,7 @@
             </div>
             Push to deploy
           </dt>
-          <dd class="mt-2 text-base leading-7 text-gray-600">
+          <dd class="mb-2 text-base leading-relaxed text-left">
             Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse
             semper morbi. Odio urna massa nunc massa.
           </dd>

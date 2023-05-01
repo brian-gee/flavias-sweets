@@ -6,7 +6,15 @@ import image from '@astrojs/image';
 
 // https://as/*  */tro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), image()],
+  site: 'https://flavias-sweets.netlify.app',
+  integrations: [
+    tailwind(),
+    react(),
+    image(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
+  ],
   output: 'server',
   adapter: netlify(),
 });

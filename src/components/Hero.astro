@@ -1,5 +1,6 @@
 ---
-import happyKidsBirthday from '../assets/happy-kids-birthday.jpg';
+import { Image, Picture } from '@astrojs/image/components';
+
 import { Icon } from 'astro-icon';
 
 type BulletItem = {
@@ -73,10 +74,13 @@ const bulletItems: BulletItem[] = [
               class="absolute rounded-full bg-pink-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
             </div>
             <div class="flex">
-              <img
+              <Picture
                 class="object-cover object-center mx-auto rounded-lg shadow-2xl"
-                alt="hero"
-                src={happyKidsBirthday}
+                src="/src/assets/happy-kids-birthday.jpg"
+                alt="Happy kids smiling around birthday cake"
+                width={600}
+                widths={[600, 800, 1200]}
+                aspectRatio={'4:3'}
               />
             </div>
           </div>

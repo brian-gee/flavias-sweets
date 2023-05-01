@@ -1,12 +1,12 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import netlify from '@astrojs/netlify/functions';
+import react from '@astrojs/react';
+import image from '@astrojs/image';
 
-import react from "@astrojs/react";
-
-// https://astro.build/config
+// https://as/*  */tro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()],
+  integrations: [tailwind(), react(), image()],
   output: 'server',
-  adapter: netlify()
+  adapter: netlify(),
 });

@@ -9,5 +9,4 @@ export default defineConfig({
   adapter: netlify(),
   site: 'https://flavias-sweets.netlify.app',
   integrations: [tailwind(), sitemap(), netlify()],
-  output: 'server',
 });

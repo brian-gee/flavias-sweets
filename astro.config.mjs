@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import netlify from '@astrojs/netlify/functions';
 import image from '@astrojs/image';
 
-// https://as/*  */tro.build/config
+// https://astro.build/config
 export default defineConfig({
   site: 'https://flavias-sweets.netlify.app',
   integrations: [
@@ -12,6 +12,4 @@ export default defineConfig({
       serviceEntryPoint: '@astrojs/image/sharp',
     }),
   ],
-  output: 'server',
-  adapter: netlify(),
 });

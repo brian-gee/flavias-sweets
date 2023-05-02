@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from '@astrojs/image/components';
+import Picture from '@astrojs/image';
 import heroImage from '../assets/happy-kids-birthday.jpg';
 import { Icon } from 'astro-icon';
 
@@ -78,9 +78,11 @@ const bulletItems: BulletItem[] = [
                 class="object-cover object-center mx-auto rounded-lg shadow-2xl"
                 src={heroImage}
                 alt="Happy kids smiling around birthday cake"
-                width={600}
-                widths={[600, 800, 1200]}
-                aspectRatio={'4:3'}
+                widths={[200, 400, 600]}
+                aspectRatio="4:3"
+                sizes="(max-width: 800px) 100vw, 620px"
+                loading="eager"
+                format="avif"
               />
             </div>
           </div>

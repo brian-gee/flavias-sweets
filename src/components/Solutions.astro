@@ -4,7 +4,6 @@ import { Picture } from '@astrojs/image/components';
 import { fetchIndividualPost } from '../utils/instagram.js';
 const postId = '18181813981252175';
 const post = await fetchIndividualPost(postId);
-const imageURL = post.media_url;
 ---
 
 <section class="md:w-11/12 mx-auto container max-w-7xl">
@@ -14,9 +13,10 @@ const imageURL = post.media_url;
         class="object-cover object-center mx-auto rounded-lg shadow-2xl"
         src={post.media_url}
         alt={post.caption}
-        width={600}
-        widths={[600, 1200]}
-        aspectRatio={'1:1'}
+        widths={[200, 400, 600]}
+        aspectRatio="3:4"
+        sizes="(max-width: 800px) 100vw, 620px"
+        loading="eager"
       />
     </div>
     <div class="w-full lg:w-7/12 p-2">

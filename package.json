@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.16.6",
     "@astrojs/netlify": "^2.2.2",
     "@astrojs/sitemap": "^1.2.2",
     "@astrojs/tailwind": "^3.1.1",
@@ -18,6 +17,19 @@
     "astro": "^2.3.3",
     "astro-icon": "^0.8.0",
     "astro-navbar": "^1.1.5",
+<<<<<<< HEAD
     "tailwindcss": "^3.0.24"
+=======
+    "firebase": "^9.19.1",
+    "framer-motion": "^10.12.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwindcss": "^3.0.24",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.1",
+    "accessible-astro-components": "^1.6.6"
+>>>>>>> parent of db10358 (updating with lighthouse improvements)
   }
 }

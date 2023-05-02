@@ -7,6 +7,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'server',
+  adapter: netlify(),
   site: 'https://flavias-sweets.netlify.app',
   integrations: [tailwind(), sitemap(), netlify(), image()],
   output: "server",

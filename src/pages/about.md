@@ -3,37 +3,22 @@ title: 'About Us'
 layout: '@layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: April 06, 2023
+_Last updated_: May 02, 2023
 
-# SK Cleaning Services - About Us
+# About Flavia's Sweets
 
-Welcome to SK Cleaning Services, your trusted partner for all your pool cleaning and maintenance needs in South Florida. With over 10 years of experience, we have been proudly serving customers in South Florida through all types of weather and pool conditions.
+Welcome to Flavia's Sweets! We are a small family-owned bakery located in the heart of the city. Our mission is to provide high-quality baked goods that not only taste great but are also visually appealing.
 
 ## Our Story
 
-SK Cleaning Services was founded by a team of pool enthusiasts who realized the need for a reliable, professional, and customer-focused pool servicing company in the South Florida region. Since our inception, our mission has been to provide exceptional pool care services and ensure our customers have a pristine and inviting pool experience.
+Flavia's Sweets was founded in 2010 by Flavia herself. She had always been passionate about baking and had dreams of starting her own bakery. With the help of her family, Flavia's Sweets was born. From the beginning, our focus has been on using the freshest ingredients and creating delicious treats that bring joy to our customers.
 
-## Our Expertise
+## Our Products
 
-Our team consists of highly skilled and experienced pool professionals who are dedicated to delivering top-quality services. We have experience working with a wide variety of pool types and equipment, ensuring we can tackle any challenge and provide the best solutions for our clients.
+At Flavia's Sweets, we offer a wide range of baked goods including cakes, cupcakes, cookies, and pastries. We also offer a variety of vegan and gluten-free options. All of our products are made from scratch and we take great care in ensuring that every order is fresh and made to perfection.
 
-## Our Commitment
+## Our Customers
 
-At SK Cleaning Services, our commitment is to:
+Our customers are at the heart of everything we do. We love hearing feedback from our customers and we are always striving to improve our products and services. Whether you are ordering a cake for a special occasion or simply grabbing a cupcake on your way to work, we want every experience with Flavia's Sweets to be a memorable one.
 
-- Provide exceptional pool cleaning and maintenance services
-- Offer transparent and competitive pricing
-- Build long-lasting relationships with our clients
-- Continuously enhance our knowledge and stay up-to-date with industry standards
-- Ensure customer satisfaction through our reliable and friendly service
-
-## Why Choose SK Cleaning Services?
-
-- **Experience**: Over a decade of experience in the pool servicing industry, ensuring the best solutions for your pool needs
-- **Local Knowledge**: As a South Florida-based company, we are well-versed in the unique challenges of maintaining pools in the region
-- **Customized Solutions**: We tailor our services to your specific requirements, offering personalized and comprehensive pool care
-- **Professional Team**: Our team of licensed and insured professionals are dedicated to providing the highest level of service
-
-## Contact Us
-
-If you're looking for a reliable pool servicing partner in South Florida, look no further than SK Cleaning Services. [Contact us](/contact) today to discuss your pool needs and learn more about our services.
+Thank you for choosing Flavia's Sweets for all of your baked goods needs. We look forward to serving you!

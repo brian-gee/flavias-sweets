@@ -1,5 +1,4 @@
 ---
-import { Picture } from '@astrojs/image/components';
 import heroImage from '@assets/happy-kids-birthday.jpg';
 import { Icon } from 'astro-icon';
 
@@ -74,15 +73,12 @@ const bulletItems: BulletItem[] = [
               class="absolute rounded-full bg-pink-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
             </div>
             <div class="flex">
-              <Picture
+              <img
                 class="object-cover object-center mx-auto rounded-lg shadow-2xl"
                 src={heroImage}
                 alt="Happy kids smiling around birthday cake"
-                widths={[200, 400, 600]}
-                aspectRatio="4:3"
                 sizes="(max-width: 800px) 100vw, 620px"
                 loading="eager"
-                format="avif"
               />
             </div>
           </div>

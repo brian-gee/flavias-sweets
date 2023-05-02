@@ -1,25 +1,17 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import netlify from '@astrojs/netlify/functions';
-<<<<<<< HEAD
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import image from "@astrojs/image";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  adapter: netlify(),
-  site: 'https://flavias-sweets.netlify.app',
-  integrations: [tailwind(), sitemap(), netlify()],
-  output: 'server',
+  site: "https://flavias-sweets.netlify.app",
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    mdx(),
+    sitemap(),
+  ],
 });
-=======
-
-import react from "@astrojs/react";
-
-// https://astro.build/config
-export default defineConfig({
-  integrations: [tailwind(), react()],
-  output: 'server',
-  adapter: netlify()
-});
->>>>>>> parent of db10358 (updating with lighthouse improvements)

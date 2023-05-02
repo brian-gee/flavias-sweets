@@ -1,7 +1,8 @@
 {
-  "name": "flavias-sweets",
+  "name": "astroship",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,26 +11,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^2.2.2",
-    "@astrojs/sitemap": "^1.2.2",
-    "@astrojs/tailwind": "^3.1.1",
-    "@netlify/functions": "^1.4.0",
-    "astro": "^2.3.3",
+    "@astrojs/image": "^0.14.1",
+    "@astrojs/mdx": "^0.16.0",
+    "@astrojs/sitemap": "^1.0.1",
+    "@astrojs/tailwind": "^3.0.1",
+    "@fontsource/inter": "^4.5.15",
+    "astro": "^2.0.11",
+    "astro-feather-icons": "^1.0.2",
     "astro-icon": "^0.8.0",
     "astro-navbar": "^1.1.5",
-<<<<<<< HEAD
-    "tailwindcss": "^3.0.24"
-=======
-    "firebase": "^9.19.1",
-    "framer-motion": "^10.12.4",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "tailwindcss": "^3.0.24",
-    "uuid": "^9.0.0"
+    "astro-seo": "^0.7.0",
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.1",
-    "accessible-astro-components": "^1.6.6"
->>>>>>> parent of db10358 (updating with lighthouse improvements)
+    "@tailwindcss/typography": "^0.5.9",
+    "sharp": "^0.31.3"
   }
 }

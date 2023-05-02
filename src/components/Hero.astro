@@ -1,98 +1,55 @@
 ---
-<<<<<<< HEAD
-import heroImage from '@assets/happy-kids-birthday.jpg';
-=======
-import happyKidsBirthday from '../assets/happy-kids-birthday.jpg';
->>>>>>> parent of db10358 (updating with lighthouse improvements)
-import { Icon } from 'astro-icon';
-
-type BulletItem = {
-  text: string;
-  icon: string;
-  children?: BulletItem[];
-};
-
-const bulletItems: BulletItem[] = [
-  {
-    text: 'Saves you time',
-    icon: 'ic:round-check',
-  },
-  {
-    text: 'Saves you money',
-    icon: 'ic:round-check',
-  },
-  {
-    text: 'Saves your party',
-    icon: 'ic:round-check',
-  },
-];
+import { Picture } from "@astrojs/image/components";
+import heroImage from "@assets/happy-kids-birthday.jpg";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
 ---
 
-<section class="mx-auto container">
-  <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:p-24">
-    <div class="flex flex-wrap items-center mx-auto max-w-7xl">
-      <div
-        class="flex flex-col items-start mt- mb-16 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
-        <h1
-          class="mb-8 text-4xl font-bold leading-none tracking-tighter lg:text-5xl">
-          The <span class="text-pink-500">perfect</span> party sweets, every time.
-        </h1>
-        <p class="mb-2 text-base leading-relaxed text-left">
-          <span class="font-bold">We bake the most memorable treats.</span> So you
-          can have your cake and eat it too.
-        </p>
-        <a
-          href="/contact"
-          class="my-5 w-2/3 inline-flex items-center justify-center h-10 font-medium tracking-wide rounded shadow-md bg-pink-500 text-white"
-          aria-label="Contact"
-          title="Contact">
-          Let's bake about it
-        </a>
-        <div class="flex-col max-w-7xl sm:flex">
-          <div class="prose prose-md">
-            <ul>
-              {
-                bulletItems.map((item) => (
-                  <li>
-                    <Icon
-                      name={item.icon}
-                      class="inline w-5 mb-1 text-pink-500"
-                    />
-                    {item.text}
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div
-        class="w-full mt-8 hidden lg:block lg:mt-0 lg:max-w-lg lg:w-1/2 rounded-xl lg:pl-12">
-        <div class="md:flex md:justify-center">
-          <div class="relative w-full max-w-lg">
-            <div
-              class="absolute top-0 rounded-full bg-fuchsia-300 -left-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob">
-            </div>
-            <div
-              class="absolute rounded-full bg-pink-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
-            </div>
-            <div class="flex">
-              <img
-                class="object-cover object-center mx-auto rounded-lg shadow-2xl"
-<<<<<<< HEAD
-                src={heroImage}
-                alt="Happy kids smiling around birthday cake"
-                sizes="(max-width: 800px) 100vw, 620px"
-                loading="eager"
-=======
-                alt="hero"
-                src={happyKidsBirthday}
->>>>>>> parent of db10358 (updating with lighthouse improvements)
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      class={"object-cover object-center mx-auto rounded-lg shadow-2xl"}
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Marketing website done with Astro
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Astroship is a starter template for startups, marketing websites & landing
+      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
+      any website with this starter.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+
+        Download for Free
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/surjithctly/astroship"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        GitHub Repo
+      </Link>
     </div>
   </div>
-</section>
+</main>

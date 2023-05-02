@@ -1,13 +1,23 @@
 ---
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource/inter/variable.css";
+
 export interface Props {
   title: string;
 }
 
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg",
+  Astro.site
+).toString();
 
 const { title } = Astro.props;
-const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
+
+const makeTitle = title ? title + " | " + "Flavia's Sweets" : "Flavia's Sweets";
 ---
 
 <!DOCTYPE html>
@@ -17,12 +27,32 @@ const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>
-      {makeTitle}
-    </title>
+
+    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <SEO
+      title={makeTitle}
+      description="Flavia's Sweets is the best place to get your party sweets."
+      canonical={canonicalURL}
+      twitter={{
+        creator: "brian-gee",
+        site: "brian-gee",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Flavia's Sweets - Party Sweets`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Flavia's Sweets Homepage Screenshot",
+        },
+      }}
+    />
   </head>
   <body>
-    <Nav />
+    <Navbar />
     <slot />
     <Footer />
     <style is:global>
@@ -34,18 +64,3 @@ const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
     </style>
   </body>
 </html>
-<style is:global>
-  :root {
-  }
-  main {
-    margin: auto;
-    padding: 1.5rem;
-  }
-  html {
-    font-family: system-ui, sans-serif;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-</style>

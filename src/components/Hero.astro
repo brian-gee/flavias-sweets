@@ -45,15 +45,12 @@ const bulletItems: BulletItem[] = [
           Let's bake about it
         </a>
         <div class="flex-col sm:flex">
-          <div class="prose prose-md">
-            <ul>
+          <div>
+            <ul class="list-none">
               {
                 bulletItems.map((item) => (
                   <li>
-                    <Icon
-                      name={item.icon}
-                      class="inline w-5 mb-1 text-pink-500"
-                    />
+                    <Icon name={item.icon} class="inline w-5 text-pink-500" />
                     {item.text}
                   </li>
                 ))

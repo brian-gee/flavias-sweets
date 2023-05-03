@@ -1,18 +1,18 @@
 ---
 import Layout from '@layouts/Layout.astro';
 
-const { fuck } = Astro.props;
+const { frontmatter } = Astro.props;
+console.log(frontmatter);
 ---
 
-<Layout title="About">
+<Layout title={frontmatter.title}>
   <section class="mx-auto container">
     <div
       class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
       <div class="flex flex-wrap items-center mx-auto">
         <h1
-          class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">
-          {}
-          test
+          class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter post-content">
+          {frontmatter.title}
         </h1>
         <div
           class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8">

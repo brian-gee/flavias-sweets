@@ -4,13 +4,14 @@ export interface Props {
 }
 
 import Nav from '../components/Nav.astro';
+import ReactNav from '../components/ReactNav';
 import Footer from '../components/Footer.astro';
 
 const { title } = Astro.props;
 const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,6 +24,7 @@ const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
   </head>
   <body>
     <Nav />
+    <ReactNav />
     <slot />
     <Footer />
     <style is:global>

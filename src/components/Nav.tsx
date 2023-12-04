@@ -10,14 +10,11 @@ const NavigationLinks = ({ className }) => (
     <a href="/" className="hover:text-pink-500">
       <li>Home</li>
     </a>
-    <a href="/about" className="hover:text-pink-500">
-      <li>About</li>
-    </a>
-    <a href="/gallery" className="hover:text-pink-500">
+    <a href="#gallery" className="hover:text-pink-500">
       <li>Gallery</li>
     </a>
-    <a href="/meet" className="hover:text-pink-500">
-      <li>Meet Flavia</li>
+    <a href="#about" className="hover:text-pink-500">
+      <li>About</li>
     </a>
   </ul>
 );

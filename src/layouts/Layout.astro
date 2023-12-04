@@ -3,9 +3,8 @@ export interface Props {
   title: string;
 }
 
-import Nav from '../components/Nav.astro';
 import ReactNav from '../components/ReactNav';
-import Footer from '../components/Footer.astro';
+import Footer from '../components/Footer';
 
 const { title } = Astro.props;
 const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
@@ -22,7 +21,7 @@ const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
       {makeTitle}
     </title>
   </head>
-  <body>
+  <body class="bg-neutral-100">
     <!-- <Nav /> -->
     <ReactNav client:load />
     <slot />

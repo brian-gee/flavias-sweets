@@ -7,13 +7,13 @@ import { IoMdClose } from 'react-icons/io';
 // Navigation links component
 const NavigationLinks = ({ className }) => (
   <ul className={className}>
-    <a href="/" className="hover:text-pink-500">
+    <a href="/" className="hover:text-pink-400">
       <li>Home</li>
     </a>
-    <a href="#gallery" className="hover:text-pink-500">
+    <a href="#gallery" className="hover:text-pink-400">
       <li>Gallery</li>
     </a>
-    <a href="#about" className="hover:text-pink-500">
+    <a href="#about" className="hover:text-pink-400">
       <li>About</li>
     </a>
   </ul>
@@ -42,14 +42,14 @@ const SocialIcons = () => (
   <ul className="flex space-x-4 font-bold text-lg">
     <a
       href="https://www.facebook.com/Flaviasweets/"
-      className="hover:text-pink-500">
+      className="hover:text-pink-400">
       <li>
         <FaFacebook className="w-6 h-6" />
       </li>
     </a>
     <a
       href="https://www.instagram.com/flavias_sweets/"
-      className="hover:text-pink-500">
+      className="hover:text-pink-400">
       <li>
         <FaInstagram className="w-6 h-6" />
       </li>
@@ -70,7 +70,7 @@ export default function ReactNav() {
         <div className="flex items-center space-x-4">
           <SocialIcons />
           <button onClick={toggleMobileNav}>
-            <TiThMenu className="lg:hidden text-pink-500 w-6 h-6" />
+            <TiThMenu className="lg:hidden text-pink-400 w-6 h-6" />
           </button>
           {isOpen && <MobileNav toggleMobileNav={toggleMobileNav} />}
         </div>

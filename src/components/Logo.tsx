@@ -7,7 +7,7 @@ export default function Logo() {
         title="Flavia's Sweets"
         className="inline-flex items-center">
         <svg
-          className="w-8 text-pink-500"
+          className="w-8 text-pink-400"
           viewBox="0 0 24 24"
           strokeLinejoin="round" // Change camelCase to kebab-case
           strokeWidth="2"
@@ -20,7 +20,7 @@ export default function Logo() {
           <rect x="14" y="1" width="7" height="6"></rect>
           <rect x="14" y="11" width="7" height="12"></rect>
         </svg>
-        <span className="ml-2 text-xl font-bold tracking-wide hover:text-pink-500">
+        <span className="ml-2 text-xl font-bold tracking-wide hover:text-pink-400">
           Flavia's Sweets
         </span>
       </a>

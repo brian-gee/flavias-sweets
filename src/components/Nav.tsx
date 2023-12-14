@@ -66,13 +66,13 @@ export default function ReactNav() {
     <header className="px-3 sm:px-6 py-10">
       <div className="mx-auto flex max-w-3xl lg:max-w-6xl items-center justify-between">
         <Logo />
-        <NavLinks />
+        {/* <NavLinks /> */}
         <div className="flex items-center space-x-4">
           <SocialIcons />
-          <button onClick={toggleMobileNav}>
+          {/* <button onClick={toggleMobileNav}>
             <TiThMenu className="lg:hidden text-pink-400 w-6 h-6" />
-          </button>
-          {isOpen && <MobileNav toggleMobileNav={toggleMobileNav} />}
+          </button> */}
+          {/* {isOpen && <MobileNav toggleMobileNav={toggleMobileNav} />} */}
         </div>
       </div>
     </header>

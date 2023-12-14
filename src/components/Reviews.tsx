@@ -26,25 +26,27 @@ const reviews = [
 
 export default function Example() {
   return (
-    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 p-10 justify-items-center">
-      <h1 className="font-bold text-gray-900 text-3xl text-center">
-        What our customers are saying
+    <div>
+      <h1 className="text-center font-bold text-3xl p-2">
+        What our customers have to say
       </h1>
-      {reviews.map((review) => (
-        <div
-          key={review.name}
-          className="flex flex-col justify-center items-center text-center my-2">
-          <div>{review.description}</div>
-          <div className="flex items-center space-x-4 mt-4 justify-center">
-            <img
-              src={review.image}
-              alt=""
-              className="h-24 w-24 rounded-full object-cover"
-            />
-            <p className="font-semibold text-gray-900">First Last</p>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 p-10 justify-items-center">
+        {reviews.map((review) => (
+          <div
+            key={review.name}
+            className="flex flex-col justify-center items-center text-center my-2">
+            <div>{review.description}</div>
+            <div className="flex items-center space-x-4 mt-4 justify-center">
+              <img
+                src={review.image}
+                alt=""
+                className="h-24 w-24 rounded-full object-cover"
+              />
+              <p className="font-semibold text-gray-900">First Last</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

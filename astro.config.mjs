@@ -7,8 +7,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  // output: 'static',
-  // adapter: netlify(),
+  output: 'server',
+  adapter: netlify(),
   site: 'https://flavias-sweets.netlify.app',
   integrations: [tailwind(), sitemap(), netlify(), react()],
   vite: {

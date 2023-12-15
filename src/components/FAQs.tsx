@@ -1,6 +1,6 @@
 const faqs = [
   {
-    question: 'Push to deploy?',
+    question: 'Do you only make cakes?',
     answer:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis.',
   },

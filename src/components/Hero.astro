@@ -21,22 +21,24 @@
               name="access_key"
               value="795bef11-df67-4a28-93d3-bbe7d6c7dc6e"
             />
-            <div class="flex space-x-2">
+            <div
+              class="flex flex-col sm:flex-row sm:space-x-2 justify-center items-center">
               <input
                 type="text"
                 name="name"
                 required
-                class="mb-4 w-full p-3 border-2 border-gray-300 rounded"
+                class="mb-2 w-full p-3 border-2 border-gray-300 rounded"
                 placeholder="Name"
               />
               <input
                 type="email"
                 name="email"
                 required
-                class="mb-4 w-full p-3 border-2 border-gray-300 rounded"
+                class="mb-2 w-full p-3 border-2 border-gray-300 rounded"
                 placeholder="Email"
               />
             </div>
+
             <div class="h-captcha" data-captcha="true"></div>
             <button
               type="submit"

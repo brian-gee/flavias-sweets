@@ -1,24 +1,24 @@
-import { MdCake } from 'react-icons/md';
+import { FaStar } from 'react-icons/fa';
 
 const reviews = [
   {
     name: 'Amy Winehouse',
     description:
-      '"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis."',
+      "'I ordered a custom birthday cake from here, and it was a hit! Not only was it visually stunning, but it tasted heavenly. Their attention to detail is remarkable, and the service was friendly and helpful. Can't wait to order again for our next celebration'",
     image:
       'https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     name: 'Jordan Wing',
     description:
-      '"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."',
+      "'Ordered a custom cake for my daughter's wedding, and it was everything we hoped for. Elegant design, exquisite taste, and it became a beautiful centerpiece of the evening. Thank you for making our special day even more memorable!'",
     image:
       'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     name: 'Chase Musk',
     description:
-      '"Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."',
+      "'Every order from here has been a delightful experience. The flavors are unique and always leave my guests impressed. Highly recommend for anyone looking for something special.'",
     image:
       'https://images.pexels.com/photos/769745/pexels-photo-769745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
@@ -42,7 +42,16 @@ export default function Example() {
                 alt=""
                 className="h-20 w-20 rounded-full object-cover"
               />
-              <p className="font-semibold text-gray-900">{review.name}</p>
+              <div>
+                <p className="font-semibold text-gray-900">{review.name}</p>
+                <div className="flex text-orange-300">
+                  <FaStar></FaStar>
+                  <FaStar></FaStar>
+                  <FaStar></FaStar>
+                  <FaStar></FaStar>
+                  <FaStar></FaStar>
+                </div>
+              </div>
             </div>
           </div>
         ))}

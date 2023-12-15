@@ -1,5 +1,5 @@
 {
-  "name": "flavias-sweets",
+  "name": "flaviasweets",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,21 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.5",
-    "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.2",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "astro": "^3.5.4",
-    "astro-icon": "^0.8.1",
-    "astro-navbar": "^2.3.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "@astrojs/react": "^3.0.7",
+    "@astrojs/tailwind": "^5.0.3",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.17",
+    "astro": "^4.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "tailwindcss": "^3.3.5"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10",
-    "accessible-astro-components": "^2.3.1"
+    "tailwindcss": "^3.3.6"
   }
 }

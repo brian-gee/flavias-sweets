@@ -1,4 +1,4 @@
-<section class="mb-24">
+<section class="mb-0 md:mb-24">
   <div class="px-6 py-12 text-center md:px-12 lg:my-12 lg:text-left">
     <div
       class="w-100 mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
@@ -12,19 +12,49 @@
             With our cakes, no one will forget you. Based in Hollywood, FL, we
             serve Broward and Miami-Dade county.
           </h2>
-          <a
-            class="mb-2 mr-0 lg:mr-20 flex justify-center rounded bg-pink-400 px-12 pt-4 pb-3.5 text-md font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-pink-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-pink-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            href="#!"
-            role="button">I want to be remembered</a
-          >
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="795bef11-df67-4a28-93d3-bbe7d6c7dc6e"
+            />
+            <div class="flex space-x-2">
+              <input
+                type="text"
+                name="name"
+                required
+                class="mb-4 w-full p-3 border-2 border-gray-300 rounded"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                class="mb-4 w-full p-3 border-2 border-gray-300 rounded"
+                placeholder="Email"
+              />
+            </div>
+
+            <div class="h-captcha" data-captcha="true"></div>
+
+            <button
+              type="submit"
+              class="w-full rounded bg-pink-400 px-4 py-3 text-md font-medium uppercase text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-600 focus:outline-none active:bg-pink-700">
+              I want to be remembered
+            </button>
+
+            <p class="text-center text-sm text-gray-500 my-4">
+              We'll never share your info with anyone.
+            </p>
+          </form>
         </div>
-        <div class="mb-12 lg:mb-0">
-          <img
-            src="https://images.pexels.com/photos/7100327/pexels-photo-7100327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            class="w-full rounded-lg shadow-lg"
-            alt=""
-          />
-        </div>
+      </div>
+      <div class="my-20 md:my-0">
+        <img
+          src="https://images.pexels.com/photos/7100327/pexels-photo-7100327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          class="w-full rounded-lg shadow-lg"
+          alt="kids smiling around cake"
+        />
       </div>
     </div>
   </div>

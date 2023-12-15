@@ -2,21 +2,21 @@ import { MdCake } from 'react-icons/md';
 
 const reviews = [
   {
-    name: 'Push to deploy.',
+    name: 'Amy Winehouse',
     description:
       '"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis."',
     image:
       'https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
-    name: 'SSL certificates.',
+    name: 'Jordan Wing',
     description:
       '"Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."',
     image:
       'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
-    name: 'Database backups.',
+    name: 'Chase Musk',
     description:
       '"Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."',
     image:
@@ -40,9 +40,9 @@ export default function Example() {
               <img
                 src={review.image}
                 alt=""
-                className="h-24 w-24 rounded-full object-cover"
+                className="h-20 w-20 rounded-full object-cover"
               />
-              <p className="font-semibold text-gray-900">First Last</p>
+              <p className="font-semibold text-gray-900">{review.name}</p>
             </div>
           </div>
         ))}

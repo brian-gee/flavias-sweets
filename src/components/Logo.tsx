@@ -20,7 +20,7 @@ export default function Logo() {
           <rect x="14" y="1" width="7" height="6"></rect>
           <rect x="14" y="11" width="7" height="12"></rect>
         </svg>
-        <span className="ml-2 text-xl font-bold tracking-wide hover:text-pink-400">
+        <span className="ml-2 text-3xl font-bold tracking-wide hover:text-pink-400">
           Flavia's Sweets
         </span>
       </a>

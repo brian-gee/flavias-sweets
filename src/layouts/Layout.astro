@@ -4,6 +4,7 @@ export interface Props {
 }
 
 import '@fontsource/inter';
+import '@fontsource/dancing-script';
 import ReactNav from '../components/Nav';
 import Footer from '../components/Footer';
 
@@ -28,8 +29,11 @@ const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
     <slot />
     <Footer />
     <style is:global>
-      * {
+      body {
         font-family: 'Inter';
+      }
+      header {
+        font-family: 'Dancing Script';
       }
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */

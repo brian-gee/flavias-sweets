@@ -5,8 +5,7 @@ export default function Logo() {
         href="/"
         aria-label="Flavia's Sweets"
         title="Flavia's Sweets"
-        className="inline-flex items-center"
-      >
+        className="inline-flex items-center">
         <svg
           className="w-8 text-pink-400"
           viewBox="0 0 24 24"
@@ -15,8 +14,7 @@ export default function Logo() {
           strokeLinecap="round"
           strokeMiterlimit="10" // Change camelCase to kebab-case
           stroke="currentColor"
-          fill="none"
-        >
+          fill="none">
           <rect x="3" y="1" width="7" height="12"></rect>
           <rect x="3" y="17" width="7" height="6"></rect>
           <rect x="14" y="1" width="7" height="6"></rect>

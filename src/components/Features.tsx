@@ -1,22 +1,22 @@
-import { MdCake } from "react-icons/md";
+import { MdCake } from 'react-icons/md';
 
 const features = [
   {
-    name: "Customizable Cake Creations",
+    name: 'Customizable Cake Creations',
     description:
-      "Personalize your cake with our easy customization options. Perfect for any occasion and taste preference.",
+      'Personalize your cake with our easy customization options. Perfect for any occasion and taste preference.',
     icon: MdCake,
   },
   {
-    name: "User-Friendly Online Ordering System",
+    name: 'User-Friendly Online Ordering System',
     description:
-      "Effortless ordering with our straightforward online system. A hassle-free way to get your dream cake.",
+      'Effortless ordering with our straightforward online system. A hassle-free way to get your dream cake.',
     icon: MdCake,
   },
   {
-    name: "Gallery of Inspirational Designs",
+    name: 'Gallery of Inspirational Designs',
     description:
-      "Explore our gallery for cake design inspiration. A showcase of our diverse and creative baking artistry.",
+      'Explore our gallery for cake design inspiration. A showcase of our diverse and creative baking artistry.',
     icon: MdCake,
   },
 ];
@@ -27,8 +27,7 @@ export default function Example() {
       {features.map((feature) => (
         <div
           key={feature.name}
-          className="flex flex-col justify-center items-center text-center my-2"
-        >
+          className="flex flex-col justify-center items-center text-center my-2">
           <div className="h-5 w-5 text-pink-400 mb-2">
             <feature.icon aria-hidden="true" />
           </div>

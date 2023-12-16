@@ -1,26 +1,26 @@
-import { FaStar } from "react-icons/fa";
+import { FaStar } from 'react-icons/fa';
 
 const reviews = [
   {
-    name: "Amy Winehouse",
+    name: 'Amy Winehouse',
     description:
       "I ordered a custom birthday cake from here, and it was a hit! Not only was it visually stunning, but it tasted heavenly. Their attention to detail is remarkable, and the service was friendly and helpful. Can't wait to order again for our next celebration",
     image:
-      "https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      'https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
-    name: "Jordan Wing",
+    name: 'Jordan Wing',
     description:
       "Ordered a custom cake for my daughter's wedding, and it was everything we hoped for. Elegant design, exquisite taste, and it became a beautiful centerpiece of the evening. Thank you for making our special day even more memorable!",
     image:
-      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
-    name: "Chase Musk",
+    name: 'Chase Musk',
     description:
-      "Every order from here has been a delightful experience. The flavors are unique and always leave my guests impressed. Highly recommend for anyone looking for something special.",
+      'Every order from here has been a delightful experience. The flavors are unique and always leave my guests impressed. Highly recommend for anyone looking for something special.',
     image:
-      "https://images.pexels.com/photos/769745/pexels-photo-769745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      'https://images.pexels.com/photos/769745/pexels-photo-769745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
 ];
 
@@ -34,8 +34,7 @@ export default function Example() {
         {reviews.map((review) => (
           <div
             key={review.name}
-            className="flex flex-col justify-center items-center text-center my-2"
-          >
+            className="flex flex-col justify-center items-center text-center my-2">
             <div>"{review.description}"</div>
             <div className="flex items-center space-x-4 mt-4 justify-center">
               <img

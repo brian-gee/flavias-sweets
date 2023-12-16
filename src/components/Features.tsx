@@ -23,7 +23,7 @@ const features = [
 
 export default function Example() {
   return (
-    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 py-20 px-10 justify-items-center bg-neutral-200 mb-32 ">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 py-28 px-10 justify-items-center bg-neutral-200 mb-32 ">
       {features.map((feature) => (
         <div
           key={feature.name}

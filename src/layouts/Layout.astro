@@ -3,6 +3,7 @@ export interface Props {
   title: string;
 }
 
+import '@fontsource/inter';
 import ReactNav from '../components/Nav';
 import Footer from '../components/Footer';
 
@@ -27,6 +28,9 @@ const makeTitle = title ? title + ' | ' + "Flavia's Sweets" : "Flavia's Sweets";
     <slot />
     <Footer />
     <style is:global>
+      * {
+        font-family: 'Inter';
+      }
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {

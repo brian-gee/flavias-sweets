@@ -21,9 +21,9 @@ const features = [
   },
 ];
 
-export default function Example() {
+export default function Features() {
   return (
-    <div className="px-10 mx-auto mb-32 grid grid-cols-1 gap-10 max-w-7xl sm:grid-cols-3 py-28 justify-items-center bg-neutral-200 ">
+    <div className="grid grid-cols-1 gap-10 px-10 mx-auto mb-32 max-w-7xl sm:grid-cols-3 py-28 justify-items-center bg-neutral-200 ">
       {features.map((feature) => (
         <div
           key={feature.name}

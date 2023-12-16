@@ -27,7 +27,7 @@ const reviews = [
 export default function Example() {
   return (
     <div className="pb-20">
-      <h1 className="text-center font-bold text-3xl p-2">
+      <h1 className="text-center text-4xl xl:text-5xl font-bold text-slate-900 p-2">
         What our customers have to say
       </h1>
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 p-10 justify-items-center">

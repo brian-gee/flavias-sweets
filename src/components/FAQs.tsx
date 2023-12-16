@@ -31,13 +31,13 @@ export default function Example() {
     <section
       id="faqs"
       className="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 pt-20 scroll-m-20 sm:pt-24 sm:scroll-m-24 md:pt-20 xl:scroll-m-32 bg-neutral-200 pb-0 md:pb-20">
-      <h1 className="text-center text-4xl font-bold text-slate-900 xl:text-5xl xl:leading-[3.5rem]">
+      <h1 className="text-center text-4xl font-bold text-slate-900 xl:text-5xl">
         Everything you need to know
       </h1>
       <div className="mx-auto max-w-2xl mt-10 divide-y divide-slate-100">
         {faqs.map((faq) => (
           <details className="group py-4">
-            <summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900">
+            <summary className="flex w-full cursor-pointer select-none justify-between text-left text-base font-bold text-lg text-slate-900">
               {faq.question}
               <svg
                 className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700"

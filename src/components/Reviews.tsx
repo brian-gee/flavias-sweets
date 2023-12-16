@@ -24,13 +24,13 @@ const reviews = [
   },
 ];
 
-export default function Example() {
+export default function Reviews() {
   return (
     <div className="pb-20">
       <h1 className="p-2 text-4xl font-bold text-center xl:text-5xl text-slate-900">
         What our customers have to say
       </h1>
-      <div className="p-10 mx-auto grid grid-cols-1 gap-10 max-w-7xl sm:grid-cols-3 justify-items-center">
+      <div className="grid grid-cols-1 gap-10 p-10 mx-auto max-w-7xl sm:grid-cols-3 justify-items-center">
         {reviews.map((review) => (
           <div
             key={review.name}

@@ -1,0 +1,45 @@
+---
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+---
+
+<!-- Main navigation component -->
+<header class="px-3 py-10 sm:px-6">
+  <div class="mx-auto flex max-w-3xl items-center justify-between lg:max-w-6xl">
+    <div>
+      <a
+        href="/"
+        aria-label="Flavia's Sweets"
+        title="Flavia's Sweets"
+        class="inline-flex items-center"
+      >
+        <img src="" alt="flaviasweets logo" class="h-12 w-12" />
+        <span class="ml-2 text-3xl font-bold tracking-wide hover:text-pink-400">
+          Flavia's Sweets
+        </span>
+      </a>
+    </div>
+    <div class="flex items-center space-x-4">
+      <!-- Social icons component -->
+      <ul class="flex space-x-4 text-lg font-bold">
+        <a
+          target="_blank"
+          href="https://www.facebook.com/Flaviasweets/"
+          class="hover:text-pink-400"
+        >
+          <li>
+            <FaFacebook class="h-6 w-6" />
+          </li>
+        </a>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/flavias_sweets/"
+          class="hover:text-pink-400"
+        >
+          <li>
+            <FaInstagram class="h-6 w-6" />
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</header>

@@ -1,3 +1,4 @@
+---
 import { MdCake } from "react-icons/md";
 
 const features = [
@@ -20,24 +21,19 @@ const features = [
     icon: MdCake,
   },
 ];
+---
 
-export default function Features() {
-  return (
-    <div className="mx-auto mb-32 grid max-w-7xl grid-cols-1 justify-items-center gap-10 bg-neutral-200 px-10 py-28 sm:grid-cols-3">
+    <div class="mx-auto mb-32 grid max-w-7xl grid-cols-1 justify-items-center gap-10 bg-neutral-200 px-10 py-28 sm:grid-cols-3">
       {features.map((feature) => (
         <div
           key={feature.name}
-          className="my-2 flex flex-col items-center justify-center text-center"
+          class="my-2 flex flex-col items-center justify-center text-center"
         >
-          <div className="mb-2 h-5 w-5 text-pink-400">
+          <div class="mb-2 h-5 w-5 text-pink-400">
             <feature.icon aria-hidden="true" />
           </div>
-          <div className="text-lg font-semibold text-gray-900">
-            {feature.name}
-          </div>
+          <div class="text-lg font-semibold text-gray-900">{feature.name}</div>
           <div>{feature.description}</div>
         </div>
       ))}
     </div>
-  );
-}

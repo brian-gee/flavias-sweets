@@ -1,3 +1,4 @@
+---
 import { FaStar } from "react-icons/fa";
 
 const reviews = [
@@ -23,40 +24,38 @@ const reviews = [
       "https://images.pexels.com/photos/769745/pexels-photo-769745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
+---
 
-export default function Reviews() {
-  return (
-    <div className="pb-20">
-      <h1 className="p-2 text-center text-4xl font-bold text-slate-900 xl:text-5xl">
-        What our customers have to say
-      </h1>
-      <div className="mx-auto grid max-w-7xl grid-cols-1 justify-items-center gap-10 p-10 sm:grid-cols-3">
-        {reviews.map((review) => (
-          <div
-            key={review.name}
-            className="my-2 flex flex-col items-center justify-center text-center"
-          >
-            <div>"{review.description}"</div>
-            <div className="mt-4 flex items-center justify-center space-x-4">
-              <img
-                src={review.image}
-                alt=""
-                className="h-20 w-20 rounded-full object-cover"
-              />
-              <div>
-                <p className="font-semibold text-gray-900">{review.name}</p>
-                <div className="flex text-orange-300">
-                  <FaStar></FaStar>
-                  <FaStar></FaStar>
-                  <FaStar></FaStar>
-                  <FaStar></FaStar>
-                  <FaStar></FaStar>
-                </div>
+<div class="pb-20">
+  <h1 class="p-2 text-center text-4xl font-bold text-slate-900 xl:text-5xl">
+    What our customers have to say
+  </h1>
+  <div
+    class="mx-auto grid max-w-7xl grid-cols-1 justify-items-center gap-10 p-10 sm:grid-cols-3"
+  >
+    {
+      reviews.map((review) => (
+        <div class="my-2 flex flex-col items-center justify-center text-center">
+          <div>"{review.description}"</div>
+          <div class="mt-4 flex items-center justify-center space-x-4">
+            <img
+              src={review.image}
+              alt=""
+              class="h-20 w-20 rounded-full object-cover"
+            />
+            <div>
+              <p class="font-semibold text-gray-900">{review.name}</p>
+              <div class="flex text-orange-300">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
               </div>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+        </div>
+      ))
+    }
+  </div>
+</div>

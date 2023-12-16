@@ -1,6 +1,8 @@
 ---
 import Facebook from "../assets/icons/Facebook.astro";
 import Instagram from "../assets/icons/Instagram.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/flavias-sweets-nobg.png";
 ---
 
 <!-- Main navigation component -->
@@ -13,7 +15,7 @@ import Instagram from "../assets/icons/Instagram.astro";
         title="Flavia's Sweets"
         class="inline-flex items-center"
       >
-        <img src="" alt="flaviasweets logo" class="h-12 w-12" />
+        <Image src={logo} alt="flaviasweets logo" class="h-12 w-12" />
         <span class="ml-2 text-3xl font-bold tracking-wide hover:text-pink-400">
           Flavia's Sweets
         </span>

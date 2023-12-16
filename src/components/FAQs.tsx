@@ -26,19 +26,19 @@ const faqs = [
   },
 ];
 
-export default function Example() {
+export default function FAQs() {
   return (
     <section
       id="faqs"
-      className="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 pt-20 scroll-m-20 sm:pt-24 sm:scroll-m-24 md:pt-20 xl:scroll-m-32 bg-neutral-200 pb-0 md:pb-20"
+      className="w-full px-4 pt-20 pb-0 mx-auto max-w-container sm:px-6 lg:px-8 scroll-m-20 sm:pt-24 sm:scroll-m-24 md:pt-20 xl:scroll-m-32 bg-neutral-200 md:pb-20"
     >
-      <h1 className="text-center text-4xl font-bold text-slate-900 xl:text-5xl">
+      <h1 className="text-4xl font-bold text-center text-slate-900 xl:text-5xl">
         Everything you need to know
       </h1>
       <div className="max-w-2xl mx-auto mt-10 divide-y divide-slate-100">
         {faqs.map((faq) => (
-          <details className="group py-4">
-            <summary className="flex w-full cursor-pointer select-none justify-between text-left font-bold text-lg text-slate-900">
+          <details className="py-4 group">
+            <summary className="flex justify-between w-full text-lg font-bold text-left cursor-pointer select-none text-slate-900">
               {faq.question}
               <svg
                 className="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700"
@@ -52,7 +52,7 @@ export default function Example() {
                 <path className="group-open:hidden" d="M12 6v12"></path>
               </svg>
             </summary>
-            <div className="pb-6 pt-6">
+            <div className="pt-6 pb-6">
               <div className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500">
                 <p>{faq.answer}</p>
               </div>

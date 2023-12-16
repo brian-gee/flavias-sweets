@@ -21,16 +21,16 @@ const NavigationLinks = ({ className }) => (
 
 // Desktop navigation links
 const NavLinks = () => (
-  <NavigationLinks className="hidden lg:flex space-x-8 font-bold text-lg" />
+  <NavigationLinks className="hidden text-lg font-bold lg:flex space-x-8" />
 );
 
 // Mobile navigation menu
 const MobileNav = ({ toggleMobileNav }) => (
-  <div className="lg:hidden fixed inset-0 bg-neutral-100 flex flex-col items-center">
+  <div className="fixed inset-0 flex flex-col items-center lg:hidden bg-neutral-100">
     <button onClick={toggleMobileNav} className="self-end p-6 text-4xl">
       <IoMdClose />
     </button>
-    <NavigationLinks className="flex flex-col space-y-2 items-center text-4xl" />
+    <NavigationLinks className="flex flex-col items-center text-4xl space-y-2" />
     <div className="pt-6">
       <SocialIcons />
     </div>
@@ -39,7 +39,7 @@ const MobileNav = ({ toggleMobileNav }) => (
 
 // Social icons component
 const SocialIcons = () => (
-  <ul className="flex space-x-4 font-bold text-lg">
+  <ul className="flex text-lg font-bold space-x-4">
     <a
       target="_blank"
       href="https://www.facebook.com/Flaviasweets/"
@@ -67,14 +67,14 @@ export default function ReactNav() {
   const toggleMobileNav = () => setIsOpen(!isOpen);
 
   return (
-    <header className="px-3 sm:px-6 py-10">
-      <div className="mx-auto flex max-w-3xl lg:max-w-6xl items-center justify-between">
+    <header className="px-3 py-10 sm:px-6">
+      <div className="flex items-center justify-between max-w-3xl mx-auto lg:max-w-6xl">
         <Logo />
         {/* <NavLinks /> */}
         <div className="flex items-center space-x-4">
           <SocialIcons />
           {/* <button onClick={toggleMobileNav}>
-            <TiThMenu className="lg:hidden text-pink-400 w-6 h-6" />
+            <TiThMenu className="w-6 h-6 text-pink-400 lg:hidden" />
           </button> */}
           {/* {isOpen && <MobileNav toggleMobileNav={toggleMobileNav} />} */}
         </div>

@@ -1,10 +1,11 @@
 <section class="mb-0 md:mb-24">
   <div class="px-6 py-12 text-center md:px-12 lg:my-12 lg:text-left">
-    <div class="mx-auto max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="lg:mt-0 order-2 lg:order-1">
+    <div class="max-w-2xl mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
+      <div class="flex flex-col items-center gap-12 lg:flex-row">
+        <div class="order-2 lg:mt-0 lg:order-1">
           <h1
-            class="mb-10 md:mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
+            class="mb-10 text-5xl font-bold tracking-tight md:mb-16 md:text-6xl xl:text-7xl"
+          >
             A <span class="text-pink-400">cake</span> no one will ever forget
           </h1>
           <h2 class="mb-10 text-md md:text-xl xl:text-2xl">
@@ -14,26 +15,28 @@
           <form
             action="https://api.web3forms.com/submit"
             method="POST"
-            autocomplete="off">
+            autocomplete="off"
+          >
             <input
               type="hidden"
               name="access_key"
               value="795bef11-df67-4a28-93d3-bbe7d6c7dc6e"
             />
             <div
-              class="flex flex-col sm:flex-row sm:space-x-2 justify-center items-center">
+              class="flex flex-col items-center justify-center sm:flex-row sm:space-x-2"
+            >
               <input
                 type="text"
                 name="name"
                 required
-                class="mb-2 w-full p-3 border-2 border-gray-300 rounded"
+                class="w-full p-3 mb-2 border-2 border-gray-300 rounded"
                 placeholder="Name"
               />
               <input
                 type="email"
                 name="email"
                 required
-                class="mb-2 w-full p-3 border-2 border-gray-300 rounded"
+                class="w-full p-3 mb-2 border-2 border-gray-300 rounded"
                 placeholder="Email"
               />
             </div>
@@ -41,11 +44,12 @@
             <div class="h-captcha" data-captcha="true"></div>
             <button
               type="submit"
-              class="w-full rounded bg-pink-400 px-4 py-3 text-md font-medium uppercase text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-600 focus:outline-none active:bg-pink-700">
+              class="w-full px-4 py-3 font-medium text-white uppercase bg-pink-400 rounded shadow-md transition duration-150 ease-in-out text-md hover:bg-primary-600 focus:outline-none active:bg-pink-700"
+            >
               Let's Bake a cake!
             </button>
 
-            <p class="text-center text-sm text-gray-500 my-4">
+            <p class="my-4 text-sm text-center text-gray-500">
               We'll never share your info with anyone.
             </p>
           </form>

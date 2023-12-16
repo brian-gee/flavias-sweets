@@ -27,21 +27,21 @@ const reviews = [
 export default function Example() {
   return (
     <div className="pb-20">
-      <h1 className="text-center text-4xl xl:text-5xl font-bold text-slate-900 p-2">
+      <h1 className="p-2 text-4xl font-bold text-center xl:text-5xl text-slate-900">
         What our customers have to say
       </h1>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 p-10 justify-items-center">
+      <div className="p-10 mx-auto grid grid-cols-1 gap-10 max-w-7xl sm:grid-cols-3 justify-items-center">
         {reviews.map((review) => (
           <div
             key={review.name}
-            className="flex flex-col justify-center items-center text-center my-2"
+            className="flex flex-col items-center justify-center my-2 text-center"
           >
             <div>"{review.description}"</div>
-            <div className="flex items-center space-x-4 mt-4 justify-center">
+            <div className="flex items-center justify-center mt-4 space-x-4">
               <img
                 src={review.image}
                 alt=""
-                className="h-20 w-20 rounded-full object-cover"
+                className="object-cover w-20 h-20 rounded-full"
               />
               <div>
                 <p className="font-semibold text-gray-900">{review.name}</p>

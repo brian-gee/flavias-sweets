@@ -10,10 +10,10 @@ export default function Logo() {
         <svg
           className="w-8 text-pink-400"
           viewBox="0 0 24 24"
-          strokeLinejoin="round" // Change camelCase to kebab-case
+          strokeLinejoin="round"
           strokeWidth="2"
           strokeLinecap="round"
-          strokeMiterlimit="10" // Change camelCase to kebab-case
+          strokeMiterlimit="10"
           stroke="currentColor"
           fill="none"
         >

@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
 import react from "@astrojs/react";
@@ -7,8 +7,8 @@ import react from "@astrojs/react";
 export default defineConfig({
   vite: {
     ssr: {
-      noExternal: ['react-icons']
-    }
+      noExternal: ["react-icons"],
+    },
   },
-  integrations: [tailwind(), react()]
+  integrations: [tailwind(), react()],
 });

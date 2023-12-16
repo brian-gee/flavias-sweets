@@ -21,16 +21,16 @@ const NavigationLinks = ({ className }) => (
 
 // Desktop navigation links
 const NavLinks = () => (
-  <NavigationLinks className="hidden text-lg font-bold lg:flex space-x-8" />
+  <NavigationLinks className="hidden space-x-8 text-lg font-bold lg:flex" />
 );
 
 // Mobile navigation menu
 const MobileNav = ({ toggleMobileNav }) => (
-  <div className="fixed inset-0 flex flex-col items-center lg:hidden bg-neutral-100">
+  <div className="fixed inset-0 flex flex-col items-center bg-neutral-100 lg:hidden">
     <button onClick={toggleMobileNav} className="self-end p-6 text-4xl">
       <IoMdClose />
     </button>
-    <NavigationLinks className="flex flex-col items-center text-4xl space-y-2" />
+    <NavigationLinks className="flex flex-col items-center space-y-2 text-4xl" />
     <div className="pt-6">
       <SocialIcons />
     </div>
@@ -39,14 +39,14 @@ const MobileNav = ({ toggleMobileNav }) => (
 
 // Social icons component
 const SocialIcons = () => (
-  <ul className="flex text-lg font-bold space-x-4">
+  <ul className="flex space-x-4 text-lg font-bold">
     <a
       target="_blank"
       href="https://www.facebook.com/Flaviasweets/"
       className="hover:text-pink-400"
     >
       <li>
-        <FaFacebook className="w-6 h-6" />
+        <FaFacebook className="h-6 w-6" />
       </li>
     </a>
     <a
@@ -55,7 +55,7 @@ const SocialIcons = () => (
       className="hover:text-pink-400"
     >
       <li>
-        <FaInstagram className="w-6 h-6" />
+        <FaInstagram className="h-6 w-6" />
       </li>
     </a>
   </ul>
@@ -68,7 +68,7 @@ export default function ReactNav() {
 
   return (
     <header className="px-3 py-10 sm:px-6">
-      <div className="flex items-center justify-between max-w-3xl mx-auto lg:max-w-6xl">
+      <div className="mx-auto flex max-w-3xl items-center justify-between lg:max-w-6xl">
         <Logo />
         {/* <NavLinks /> */}
         <div className="flex items-center space-x-4">

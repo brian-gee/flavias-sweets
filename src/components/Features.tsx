@@ -23,13 +23,13 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="grid grid-cols-1 gap-10 px-10 mx-auto mb-32 max-w-7xl sm:grid-cols-3 py-28 justify-items-center bg-neutral-200 ">
+    <div className="mx-auto mb-32 grid max-w-7xl grid-cols-1 justify-items-center gap-10 bg-neutral-200 px-10 py-28 sm:grid-cols-3 ">
       {features.map((feature) => (
         <div
           key={feature.name}
-          className="flex flex-col items-center justify-center my-2 text-center"
+          className="my-2 flex flex-col items-center justify-center text-center"
         >
-          <div className="w-5 h-5 mb-2 text-pink-400">
+          <div className="mb-2 h-5 w-5 text-pink-400">
             <feature.icon aria-hidden="true" />
           </div>
           <div className="text-lg font-semibold text-gray-900">

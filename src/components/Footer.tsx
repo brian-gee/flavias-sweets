@@ -5,8 +5,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="max-w-screen-xl px-4 py-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
-      <div className="flex justify-center mt-8 space-x-4">
+    <div className="mx-auto max-w-screen-xl overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mt-8 flex justify-center space-x-4">
         {/* Facebook link */}
         <a
           href="https://www.facebook.com/Flaviasweets/"
@@ -16,7 +16,7 @@ export default function Footer() {
         >
           <span className="sr-only">Facebook</span>
           <svg
-            className="w-6 h-6"
+            className="h-6 w-6"
             aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ export default function Footer() {
         >
           <span className="sr-only">Instagram</span>
           <svg
-            className="w-6 h-6"
+            className="h-6 w-6"
             aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 24 24"
@@ -55,7 +55,7 @@ export default function Footer() {
       </div>
 
       {/* Dynamic Year */}
-      <p className="mt-4 text-base leading-6 text-center text-gray-400">
+      <p className="mt-4 text-center text-base leading-6 text-gray-400">
         © {currentYear} Flavia's Sweets. All rights reserved.
       </p>
     </div>

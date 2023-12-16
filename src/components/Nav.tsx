@@ -41,6 +41,7 @@ const MobileNav = ({ toggleMobileNav }) => (
 const SocialIcons = () => (
   <ul className="flex space-x-4 font-bold text-lg">
     <a
+      target="_blank"
       href="https://www.facebook.com/Flaviasweets/"
       className="hover:text-pink-400">
       <li>
@@ -48,6 +49,7 @@ const SocialIcons = () => (
       </li>
     </a>
     <a
+      target="_blank"
       href="https://www.instagram.com/flavias_sweets/"
       className="hover:text-pink-400">
       <li>

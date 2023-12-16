@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import Logo from './Logo';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
-import { TiThMenu } from 'react-icons/ti';
-import { IoMdClose } from 'react-icons/io';
+import { useState } from "react";
+import Logo from "./Logo";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { TiThMenu } from "react-icons/ti";
+import { IoMdClose } from "react-icons/io";
 
 // Navigation links component
 const NavigationLinks = ({ className }) => (
@@ -43,7 +43,8 @@ const SocialIcons = () => (
     <a
       target="_blank"
       href="https://www.facebook.com/Flaviasweets/"
-      className="hover:text-pink-400">
+      className="hover:text-pink-400"
+    >
       <li>
         <FaFacebook className="w-6 h-6" />
       </li>
@@ -51,7 +52,8 @@ const SocialIcons = () => (
     <a
       target="_blank"
       href="https://www.instagram.com/flavias_sweets/"
-      className="hover:text-pink-400">
+      className="hover:text-pink-400"
+    >
       <li>
         <FaInstagram className="w-6 h-6" />
       </li>

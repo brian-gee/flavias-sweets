@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function SocialLinks() {
+export default function Footer() {
   // Function to get the current year
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="px-4 py-12 mx-auto overflow-hidden max-w-screen-xl sm:px-6 lg:px-8">
+    <div className="max-w-screen-xl px-4 py-12 mx-auto overflow-hidden sm:px-6 lg:px-8">
       <div className="flex justify-center mt-8 space-x-4">
         {/* Facebook link */}
         <a
@@ -55,7 +55,7 @@ export default function SocialLinks() {
       </div>
 
       {/* Dynamic Year */}
-      <p className="mt-4 text-base text-center text-gray-400 leading-6">
+      <p className="mt-4 text-base leading-6 text-center text-gray-400">
         © {currentYear} Flavia's Sweets. All rights reserved.
       </p>
     </div>

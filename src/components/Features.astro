@@ -1,24 +1,21 @@
 ---
-import Star from "../assets/icons/Cake.astro";
+import Cake from "../assets/icons/Cake.astro";
 
 const features = [
   {
     name: "Customizable Cake Creations",
     description:
       "Personalize your cake with our easy customization options. Perfect for any occasion and taste preference.",
-    icon: Star,
   },
   {
     name: "User-Friendly Online Ordering System",
     description:
       "Effortless ordering with our straightforward online system. A hassle-free way to get your dream cake.",
-    icon: Star,
   },
   {
     name: "Gallery of Inspirational Designs",
     description:
       "Explore our gallery for cake design inspiration. A showcase of our diverse and creative baking artistry.",
-    icon: Star,
   },
 ];
 ---
@@ -29,9 +26,7 @@ const features = [
   {
     features.map((feature) => (
       <div class="my-2 flex flex-col items-center justify-center text-center">
-        <div class="mb-2 h-5 w-5 text-pink-400">
-          <Star />
-        </div>
+        <Cake class="w-5 h-5 mb-2 text-pink-400" />
         <div class="text-lg font-semibold text-gray-900">{feature.name}</div>
         <div>{feature.description}</div>
       </div>

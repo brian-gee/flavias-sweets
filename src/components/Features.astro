@@ -20,16 +20,18 @@ const features = [
 ];
 ---
 
-<div
-  class="px-10 mx-auto mb-32 grid max-w-7xl grid-cols-1 justify-items-center gap-10 bg-neutral-200 py-28 sm:grid-cols-3"
->
-  {
-    features.map((feature) => (
-      <div class="flex flex-col items-center justify-center my-2 text-center">
-        <Cake class="w-5 h-5 mb-2 text-pink-400" />
-        <div class="text-lg font-semibold text-gray-900">{feature.name}</div>
-        <div>{feature.description}</div>
-      </div>
-    ))
-  }
-</div>
+<section class="bg-neutral-200">
+  <div
+    class="grid grid-cols-1 gap-10 px-10 mx-auto mb-32 justify-items-center max-w-7xl py-28 sm:grid-cols-3"
+  >
+    {
+      features.map((feature) => (
+        <div class="flex flex-col items-center justify-center my-2 text-center">
+          <Cake class="w-5 h-5 mb-2 text-pink-400" />
+          <div class="text-lg font-semibold text-gray-900">{feature.name}</div>
+          <div>{feature.description}</div>
+        </div>
+      ))
+    }
+  </div>
+</section>

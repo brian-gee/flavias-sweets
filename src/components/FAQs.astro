@@ -30,16 +30,16 @@ const faqs = [
 
 <section
   id="faqs"
-  class="max-w-container mx-auto w-full scroll-m-20 px-4 pb-0 pt-20 sm:scroll-m-24 sm:px-6 sm:pt-24 md:pb-20 md:pt-20 lg:px-8 xl:scroll-m-32"
+  class="w-full px-4 pt-20 pb-0 mx-auto max-w-container scroll-m-20 sm:scroll-m-24 sm:px-6 sm:pt-24 md:pb-20 md:pt-20 lg:px-8 xl:scroll-m-32"
 >
-  <h1 class="text-center text-4xl font-bold text-slate-900 xl:text-5xl">
+  <h1 class="text-4xl font-bold text-center text-slate-900 xl:text-5xl">
     Everything you need to know
   </h1>
-  <div class="mx-auto mt-10 max-w-2xl divide-y divide-slate-100">
+  <div class="max-w-2xl mx-auto mt-10 divide-y divide-slate-100">
     {
       faqs.map((faq) => (
-        <details class="group py-4">
-          <summary class="flex w-full cursor-pointer select-none justify-between text-left text-lg font-bold text-slate-900">
+        <details class="py-4 group">
+          <summary class="flex justify-between w-full text-lg font-bold text-left cursor-pointer select-none text-slate-900">
             {faq.question}
             <svg
               class="ml-4 mt-0.5 h-6 w-6 flex-none stroke-slate-700"
@@ -53,7 +53,7 @@ const faqs = [
               <path class="group-open:hidden" d="M12 6v12" />
             </svg>
           </summary>
-          <div class="pb-6 pt-6">
+          <div class="pt-6 pb-6">
             <div class="prose prose-slate prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500 max-w-none">
               <p>{faq.answer}</p>
             </div>

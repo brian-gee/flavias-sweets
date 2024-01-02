@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import heroImage from "../assets/kids-around-cake.jpeg";
 ---
 
 <section
@@ -33,9 +34,7 @@ import { Image } from "astro:assets";
     </div>
     <div class="order-1 lg:order-2">
       <Image
-        src="https://images.pexels.com/photos/7100327/pexels-photo-7100327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        width="342"
-        height="228"
+        src={heroImage}
         class="w-full rounded-lg shadow-lg"
         alt="kids smiling around cake"
       />

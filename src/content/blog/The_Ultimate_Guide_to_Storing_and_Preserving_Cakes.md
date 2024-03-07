@@ -3,7 +3,7 @@ title: The Ultimate Guide to Storing and Preserving Cakes
 date: "Dec 17 2023"
 ---
 
-As a lifelong cake enthusiast turned writer, I've experienced firsthand the highs of a perfectly baked cake and the lows of a sadly stale slice. In this guide, I'll share the essential tips and tricks for storing and preserving cakes to ensure that every bite is as delightful as the first.
+As a lifelong cake enthusiast, I've experienced firsthand the highs of a perfectly baked cake and the lows of a sadly stale slice. In this guide, I'll share the essential tips and tricks for storing and preserving cakes to ensure that every bite is as delightful as the first.
 
 ## Freshness First: Storing Cakes at Room Temperature
 

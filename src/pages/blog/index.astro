@@ -12,11 +12,13 @@ const posts = (await getCollection("blog")).sort((a, b) => {
 
 <Layout title="Blog">
   <section>
-    <h1 class="pb-10 text-4xl text-center sm:pb-20">Our Blog</h1>
-    <ul class="max-w-4xl p-10 mx-auto space-y-4">
+    <h1 class="pb-10 text-center text-4xl sm:pb-20">
+      Some articles about our passion
+    </h1>
+    <ul class="mx-auto max-w-4xl space-y-4 p-10">
       {
         posts.map((post) => (
-          <li class="flex flex-col sm:flex-row justify-between border-t-[1px] pt-2">
+          <li class="flex flex-col justify-between border-t-[1px] pt-2 sm:flex-row">
             <a
               href={`/blog/${post.slug}/`}
               class="flex-grow hover:underline sm:flex-grow-0"
